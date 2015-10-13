@@ -1,0 +1,48 @@
+
+/* Class = "UITextField"; accessibilityHint = "Username"; ObjectID = "7vI-98-nHi"; */
+"7vI-98-nHi.accessibilityHint" = "Username";
+
+/* Class = "UITextField"; accessibilityIdentifier = "username"; ObjectID = "7vI-98-nHi"; */
+"7vI-98-nHi.accessibilityIdentifier" = "username";
+
+/* Class = "UITextField"; accessibilityLabel = "Username"; ObjectID = "7vI-98-nHi"; */
+"7vI-98-nHi.accessibilityLabel" = "Username";
+
+/* Class = "UITextField"; placeholder = "username"; ObjectID = "7vI-98-nHi"; */
+"usernamePlaceholder" = "username";
+
+/* Class = "UIButton"; accessibilityHint = "Create account"; ObjectID = "bod-ap-hv6"; */
+"bod-ap-hv6.accessibilityHint" = "Create account";
+
+/* Class = "UIButton"; accessibilityIdentifier = "signUp"; ObjectID = "bod-ap-hv6"; */
+"bod-ap-hv6.accessibilityIdentifier" = "signUp";
+
+/* Class = "UIButton"; accessibilityLabel = "Sign up"; ObjectID = "bod-ap-hv6"; */
+"bod-ap-hv6.accessibilityLabel" = "Sign up";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "bod-ap-hv6"; */
+"bod-ap-hv6.normalTitle" = "Sign up";
+
+/* Class = "UIButton"; accessibilityHint = "Recover password"; ObjectID = "btq-hY-kg0"; */
+"btq-hY-kg0.accessibilityHint" = "Recover password";
+
+/* Class = "UIButton"; accessibilityIdentifier = "forgotPassword"; ObjectID = "btq-hY-kg0"; */
+"btq-hY-kg0.accessibilityIdentifier" = "forgotPassword";
+
+/* Class = "UIButton"; accessibilityLabel = "Forgot your password?"; ObjectID = "btq-hY-kg0"; */
+"btq-hY-kg0.accessibilityLabel" = "Forgot your password?";
+
+/* Class = "UIButton"; normalTitle = "Forgot your password?"; ObjectID = "btq-hY-kg0"; */
+"btq-hY-kg0.normalTitle" = "Forgot your password?";
+
+/* Class = "UITextField"; accessibilityHint = "Password field"; ObjectID = "yef-XO-1vy"; */
+"yef-XO-1vy.accessibilityHint" = "Password field";
+
+/* Class = "UITextField"; accessibilityIdentifier = "password"; ObjectID = "yef-XO-1vy"; */
+"yef-XO-1vy.accessibilityIdentifier" = "password";
+
+/* Class = "UITextField"; accessibilityLabel = "Password"; ObjectID = "yef-XO-1vy"; */
+"yef-XO-1vy.accessibilityLabel" = "Password";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "yef-XO-1vy"; */
+"passwordPlaceholder" = "password";
