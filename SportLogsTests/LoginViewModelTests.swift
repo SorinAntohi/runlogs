@@ -26,8 +26,8 @@ class LoginViewModelTests: XCTestCase {
     nsDefault.setObject(["en"], forKey: "AppleLanguages")
     nsDefault.synchronize()
     
-    let loginViewModel = LoginViewModel()
-    let usernamePlaceholder = loginViewModel.UsernamePlaceholder()!
+    let authViewModel = AuthViewModel()
+    let usernamePlaceholder = authViewModel.usernamePlaceholder()!
     
     XCTAssert(usernamePlaceholder.string == "username", "Incorrect username placeholder value!")
   }
@@ -38,8 +38,8 @@ class LoginViewModelTests: XCTestCase {
     nsDefault.setObject(["ro"], forKey: "AppleLanguages")
     nsDefault.synchronize()
     
-    let loginViewModel = LoginViewModel()
-    let usernamePlaceholder = loginViewModel.UsernamePlaceholder()!
+    let authViewModel = AuthViewModel()
+    let usernamePlaceholder = authViewModel.usernamePlaceholder()!
     
     XCTAssert(usernamePlaceholder.string == "utilizator", "Incorrect username placeholder value!")
   }
@@ -50,8 +50,8 @@ class LoginViewModelTests: XCTestCase {
     nsDefault.setObject(["en"], forKey: "AppleLanguages")
     nsDefault.synchronize()
     
-    let loginViewModel = LoginViewModel()
-    let passwordPlaceholder = loginViewModel.PasswordPlaceholder()!
+    let authViewModel = AuthViewModel()
+    let passwordPlaceholder = authViewModel.passwordPlaceholder()!
     
     XCTAssert(passwordPlaceholder.string == "password", "Incorrect password placeholder value!");
   }
@@ -62,8 +62,8 @@ class LoginViewModelTests: XCTestCase {
     nsDefault.setObject(["ro"], forKey: "AppleLanguages")
     nsDefault.synchronize()
     
-    let loginViewModel = LoginViewModel()
-    let passwordPlaceholder = loginViewModel.PasswordPlaceholder()!
+    let authViewModel = AuthViewModel()
+    let passwordPlaceholder = authViewModel.passwordPlaceholder()!
     
     XCTAssert(passwordPlaceholder.string == "parola", "Incorrect password placeholder value!");
   }

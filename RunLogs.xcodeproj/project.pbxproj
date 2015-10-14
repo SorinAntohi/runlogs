@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		56F5855F1BCBFB6B00C87158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */; };
-		56F585611BCBFB6B00C87158 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585601BCBFB6B00C87158 /* LoginViewController.swift */; };
+		56F585611BCBFB6B00C87158 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585601BCBFB6B00C87158 /* AuthViewController.swift */; };
 		56F585641BCBFB6B00C87158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56F585621BCBFB6B00C87158 /* Main.storyboard */; };
 		56F585671BCBFB6B00C87158 /* SportLogs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56F585651BCBFB6B00C87158 /* SportLogs.xcdatamodeld */; };
 		56F585691BCBFB6B00C87158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56F585681BCBFB6B00C87158 /* Assets.xcassets */; };
 		56F5856C1BCBFB6B00C87158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56F5856A1BCBFB6B00C87158 /* LaunchScreen.storyboard */; };
 		56F585821BCBFB6B00C87158 /* SportLogsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585811BCBFB6B00C87158 /* SportLogsUITests.swift */; };
 		56F585921BCC36D000C87158 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56F585911BCC36D000C87158 /* intro.mp4 */; settings = {ASSET_TAGS = (); }; };
-		56F5859D1BCC5BC100C87158 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* LoginViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		56F5859E1BCC5BC100C87158 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* LoginViewModel.swift */; settings = {ASSET_TAGS = (); }; };
+		56F5859D1BCC5BC100C87158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */; settings = {ASSET_TAGS = (); }; };
+		56F5859E1BCC5BC100C87158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */; settings = {ASSET_TAGS = (); }; };
 		56F585A01BCD261000C87158 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859F1BCD261000C87158 /* LoginViewModelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		56F585A81BCD34AD00C87158 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */; settings = {ASSET_TAGS = (); }; };
 		56F585A91BCD34AD00C87158 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */; settings = {ASSET_TAGS = (); }; };
@@ -42,21 +42,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		56F5855B1BCBFB6B00C87158 /* SportLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F5855B1BCBFB6B00C87158 /* RunLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		56F585601BCBFB6B00C87158 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		56F585601BCBFB6B00C87158 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		56F585631BCBFB6B00C87158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56F585661BCBFB6B00C87158 /* SportLogs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportLogs.xcdatamodel; sourceTree = "<group>"; };
 		56F585681BCBFB6B00C87158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56F5856B1BCBFB6B00C87158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56F5856D1BCBFB6B00C87158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56F585721BCBFB6B00C87158 /* SportLogsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportLogsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F585721BCBFB6B00C87158 /* RunLogs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunLogs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F585781BCBFB6B00C87158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56F5857D1BCBFB6B00C87158 /* SportLogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportLogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F5857D1BCBFB6B00C87158 /* RunLogs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunLogs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F585811BCBFB6B00C87158 /* SportLogsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLogsUITests.swift; sourceTree = "<group>"; };
 		56F585831BCBFB6B00C87158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56F585911BCC36D000C87158 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = Resources/intro.mp4; sourceTree = SOURCE_ROOT; };
-		56F5859C1BCC5BC100C87158 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		56F5859F1BCD261000C87158 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		56F585A41BCD2E7700C87158 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Main.strings; sourceTree = "<group>"; };
 		56F585A51BCD2EB500C87158 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -107,9 +107,9 @@
 		56F5855C1BCBFB6B00C87158 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56F5855B1BCBFB6B00C87158 /* SportLogs.app */,
-				56F585721BCBFB6B00C87158 /* SportLogsTests.xctest */,
-				56F5857D1BCBFB6B00C87158 /* SportLogsUITests.xctest */,
+				56F5855B1BCBFB6B00C87158 /* RunLogs.app */,
+				56F585721BCBFB6B00C87158 /* RunLogs.xctest */,
+				56F5857D1BCBFB6B00C87158 /* RunLogs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 				56F585A61BCD347900C87158 /* Utils */,
 				56F5859B1BCC5BAF00C87158 /* ViewModel */,
 				56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */,
-				56F585601BCBFB6B00C87158 /* LoginViewController.swift */,
+				56F585601BCBFB6B00C87158 /* AuthViewController.swift */,
 				56F585621BCBFB6B00C87158 /* Main.storyboard */,
 				56F585681BCBFB6B00C87158 /* Assets.xcassets */,
 				56F5856A1BCBFB6B00C87158 /* LaunchScreen.storyboard */,
@@ -169,7 +169,7 @@
 		56F5859B1BCC5BAF00C87158 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				56F5859C1BCC5BC100C87158 /* LoginViewModel.swift */,
+				56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -185,9 +185,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		56F5855A1BCBFB6B00C87158 /* SportLogs */ = {
+		56F5855A1BCBFB6B00C87158 /* RunLogs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56F585861BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "SportLogs" */;
+			buildConfigurationList = 56F585861BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "RunLogs" */;
 			buildPhases = (
 				56F585571BCBFB6B00C87158 /* Sources */,
 				56F585581BCBFB6B00C87158 /* Frameworks */,
@@ -197,14 +197,14 @@
 			);
 			dependencies = (
 			);
-			name = SportLogs;
+			name = RunLogs;
 			productName = SportLogs;
-			productReference = 56F5855B1BCBFB6B00C87158 /* SportLogs.app */;
+			productReference = 56F5855B1BCBFB6B00C87158 /* RunLogs.app */;
 			productType = "com.apple.product-type.application";
 		};
-		56F585711BCBFB6B00C87158 /* SportLogsTests */ = {
+		56F585711BCBFB6B00C87158 /* RunLogsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56F585891BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "SportLogsTests" */;
+			buildConfigurationList = 56F585891BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "RunLogsTests" */;
 			buildPhases = (
 				56F5856E1BCBFB6B00C87158 /* Sources */,
 				56F5856F1BCBFB6B00C87158 /* Frameworks */,
@@ -215,14 +215,14 @@
 			dependencies = (
 				56F585741BCBFB6B00C87158 /* PBXTargetDependency */,
 			);
-			name = SportLogsTests;
+			name = RunLogsTests;
 			productName = SportLogsTests;
-			productReference = 56F585721BCBFB6B00C87158 /* SportLogsTests.xctest */;
+			productReference = 56F585721BCBFB6B00C87158 /* RunLogs.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		56F5857C1BCBFB6B00C87158 /* SportLogsUITests */ = {
+		56F5857C1BCBFB6B00C87158 /* RunLogsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56F5858C1BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "SportLogsUITests" */;
+			buildConfigurationList = 56F5858C1BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "RunLogsUITests" */;
 			buildPhases = (
 				56F585791BCBFB6B00C87158 /* Sources */,
 				56F5857A1BCBFB6B00C87158 /* Frameworks */,
@@ -233,9 +233,9 @@
 			dependencies = (
 				56F5857F1BCBFB6B00C87158 /* PBXTargetDependency */,
 			);
-			name = SportLogsUITests;
+			name = RunLogsUITests;
 			productName = SportLogsUITests;
-			productReference = 56F5857D1BCBFB6B00C87158 /* SportLogsUITests.xctest */;
+			productReference = 56F5857D1BCBFB6B00C87158 /* RunLogs.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +266,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 56F585561BCBFB6B00C87158 /* Build configuration list for PBXProject "SportLogs" */;
+			buildConfigurationList = 56F585561BCBFB6B00C87158 /* Build configuration list for PBXProject "RunLogs" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -278,9 +278,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56F5855A1BCBFB6B00C87158 /* SportLogs */,
-				56F585711BCBFB6B00C87158 /* SportLogsTests */,
-				56F5857C1BCBFB6B00C87158 /* SportLogsUITests */,
+				56F5855A1BCBFB6B00C87158 /* RunLogs */,
+				56F585711BCBFB6B00C87158 /* RunLogsTests */,
+				56F5857C1BCBFB6B00C87158 /* RunLogsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,8 +319,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				56F585A81BCD34AD00C87158 /* LocalizedStrings.swift in Sources */,
-				56F5859D1BCC5BC100C87158 /* LoginViewModel.swift in Sources */,
-				56F585611BCBFB6B00C87158 /* LoginViewController.swift in Sources */,
+				56F5859D1BCC5BC100C87158 /* AuthViewModel.swift in Sources */,
+				56F585611BCBFB6B00C87158 /* AuthViewController.swift in Sources */,
 				56F585671BCBFB6B00C87158 /* SportLogs.xcdatamodeld in Sources */,
 				56F5855F1BCBFB6B00C87158 /* AppDelegate.swift in Sources */,
 			);
@@ -332,7 +332,7 @@
 			files = (
 				56F585A91BCD34AD00C87158 /* LocalizedStrings.swift in Sources */,
 				56F585A01BCD261000C87158 /* LoginViewModelTests.swift in Sources */,
-				56F5859E1BCC5BC100C87158 /* LoginViewModel.swift in Sources */,
+				56F5859E1BCC5BC100C87158 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,12 +349,12 @@
 /* Begin PBXTargetDependency section */
 		56F585741BCBFB6B00C87158 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56F5855A1BCBFB6B00C87158 /* SportLogs */;
+			target = 56F5855A1BCBFB6B00C87158 /* RunLogs */;
 			targetProxy = 56F585731BCBFB6B00C87158 /* PBXContainerItemProxy */;
 		};
 		56F5857F1BCBFB6B00C87158 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56F5855A1BCBFB6B00C87158 /* SportLogs */;
+			target = 56F5855A1BCBFB6B00C87158 /* RunLogs */;
 			targetProxy = 56F5857E1BCBFB6B00C87158 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -471,7 +471,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.SportLogs;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RunLogs;
 			};
 			name = Debug;
 		};
@@ -484,7 +484,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.SportLogs;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RunLogs;
 			};
 			name = Release;
 		};
@@ -495,8 +495,8 @@
 				INFOPLIST_FILE = SportLogsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.SportLogsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportLogs.app/SportLogs";
+				PRODUCT_NAME = RunLogs;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RunLogs.app/RunLogs";
 			};
 			name = Debug;
 		};
@@ -507,8 +507,8 @@
 				INFOPLIST_FILE = SportLogsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.SportLogsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportLogs.app/SportLogs";
+				PRODUCT_NAME = RunLogs;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RunLogs.app/RunLogs";
 			};
 			name = Release;
 		};
@@ -518,7 +518,7 @@
 				INFOPLIST_FILE = SportLogsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.SportLogsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RunLogs;
 				TEST_TARGET_NAME = SportLogs;
 				USES_XCTRUNNER = YES;
 			};
@@ -530,7 +530,7 @@
 				INFOPLIST_FILE = SportLogsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.SportLogsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RunLogs;
 				TEST_TARGET_NAME = SportLogs;
 				USES_XCTRUNNER = YES;
 			};
@@ -539,7 +539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56F585561BCBFB6B00C87158 /* Build configuration list for PBXProject "SportLogs" */ = {
+		56F585561BCBFB6B00C87158 /* Build configuration list for PBXProject "RunLogs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56F585841BCBFB6B00C87158 /* Debug */,
@@ -548,29 +548,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56F585861BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "SportLogs" */ = {
+		56F585861BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "RunLogs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56F585871BCBFB6B00C87158 /* Debug */,
 				56F585881BCBFB6B00C87158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		56F585891BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "SportLogsTests" */ = {
+		56F585891BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "RunLogsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56F5858A1BCBFB6B00C87158 /* Debug */,
 				56F5858B1BCBFB6B00C87158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		56F5858C1BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "SportLogsUITests" */ = {
+		56F5858C1BCBFB6B00C87158 /* Build configuration list for PBXNativeTarget "RunLogsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56F5858D1BCBFB6B00C87158 /* Debug */,
 				56F5858E1BCBFB6B00C87158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

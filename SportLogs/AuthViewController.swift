@@ -10,9 +10,9 @@ import UIKit
 import AVFoundation
 import QuartzCore
 
-class LoginViewController: UIViewController {
+class AuthViewController: UIViewController {
   
-  var viewModel:LoginViewModel?
+  var viewModel:AuthViewModel?
   var avPlayerLayer:AVPlayerLayer?
   var avPlayer:AVPlayer?
   var canDismissKeyboard:Bool = false
@@ -23,18 +23,23 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var bottomStackConstraint: NSLayoutConstraint!
   @IBOutlet weak var inputsStackCenterConstraint: NSLayoutConstraint!
   
-  
+  @IBOutlet weak var passwordStackView: UIView!
+  @IBOutlet weak var switchViewMode: UIButton!
+  @IBOutlet weak var recoverPassword: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view, typically from a nib.
-    viewModel = LoginViewModel()
+    viewModel = AuthViewModel()
     
     hideNavigationBar()
     setupInputs()
     setupMoviePlayer(formView.layer)
     setupBlurEfectUnderView(formView)
+    
+    switchViewMode.setTitle(viewModel?.switchViewModeTitle(), forState: UIControlState.Normal)
+    recoverPassword.setTitle(viewModel?.recoverPasswordTitle(), forState: UIControlState.Normal)
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
   }
@@ -51,11 +56,29 @@ class LoginViewController: UIViewController {
     return UIStatusBarStyle.LightContent
   }
   
-  @IBAction func onFormSwitch(sender: AnyObject) {
+  @IBAction func onSwitchViewMode(sender: AnyObject)
+  {
+    viewModel?.switchViewMode()
+    
+    switchViewMode.setTitle(viewModel?.switchViewModeTitle(), forState: UIControlState.Normal)
+    
+    switchRecoverPasswordVisibility()
+    
+    if(viewModel?.viewMode == ViewMode.Register && viewModel?.recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword)
+    {
+      switchRecoverPasswordMode()
+      switchPasswordVisibility()
+    }
   }
   
-  @IBAction func formViewTapped(sender: AnyObject) {
+  @IBAction func recoverPassword(sender: AnyObject)
+  {
+    switchRecoverPasswordMode()
+    switchPasswordVisibility()
+  }
   
+  @IBAction func formViewTapped(sender: AnyObject)
+  {
     if(username.isFirstResponder())
     {
       canDismissKeyboard = true;
@@ -76,14 +99,14 @@ class LoginViewController: UIViewController {
 
   func setupInputs()
   {
-    username.attributedPlaceholder = viewModel?.UsernamePlaceholder();
-    password.attributedPlaceholder = viewModel?.PasswordPlaceholder();
+    username.attributedPlaceholder = viewModel?.usernamePlaceholder();
+    password.attributedPlaceholder = viewModel?.passwordPlaceholder();
   }
   
   func setupMoviePlayer(layer:CALayer?)
   {
     
-    avPlayer = AVPlayer(URL: NSURL.fileURLWithPath(viewModel?.BackgroundMoviePath() as! String))
+    avPlayer = AVPlayer(URL: NSURL.fileURLWithPath(viewModel?.backgroundMoviePath() as! String))
     
     avPlayerLayer = AVPlayerLayer.init()
     avPlayerLayer?.frame = self.view.bounds
@@ -98,7 +121,8 @@ class LoginViewController: UIViewController {
 
   func setupBlurEfectUnderView(view:UIView?)
   {
-    if !UIAccessibilityIsReduceTransparencyEnabled() {
+    if !UIAccessibilityIsReduceTransparencyEnabled()
+    {
       self.view.backgroundColor = UIColor.clearColor()
     
       let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
@@ -118,10 +142,10 @@ class LoginViewController: UIViewController {
       avPlayer?.play()
   }
   
-  func keyboardNotification(notification: NSNotification) {
-    
-    if let userInfo = notification.userInfo {
-      
+  func keyboardNotification(notification: NSNotification)
+  {
+    if let userInfo = notification.userInfo
+    {
       let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.CGRectValue()
       let duration:NSTimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
       
@@ -150,6 +174,36 @@ class LoginViewController: UIViewController {
         animations: { self.view.layoutIfNeeded() },
         completion: nil)
     }
+  }
+  
+  func switchRecoverPasswordMode()
+  {
+    viewModel?.switchRecoverPasswordMode()
+    recoverPassword.setTitle(viewModel?.recoverPasswordTitle(), forState: UIControlState.Normal)
+  }
+  
+  func switchRecoverPasswordVisibility()
+  {
+    UIView.transitionWithView(passwordStackView,
+      duration: 0.4,
+      options: UIViewAnimationOptions.TransitionCrossDissolve,
+      animations: { () -> Void in
+        self.recoverPassword.alpha = self.viewModel?.viewMode == ViewMode.Register ? 0.0 : 1.0
+        self.recoverPassword.hidden = self.viewModel?.viewMode == ViewMode.Register
+      },
+      completion:nil)
+  }
+  
+  func switchPasswordVisibility()
+  {
+    UIView.transitionWithView(passwordStackView,
+      duration: 0.4,
+      options: UIViewAnimationOptions.TransitionCrossDissolve,
+      animations: { () -> Void in
+        self.passwordStackView.alpha = self.viewModel?.recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword ? 0.0 : 1.0
+        self.passwordStackView.hidden = self.viewModel?.recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword
+      },
+      completion:nil)
   }
 }
 

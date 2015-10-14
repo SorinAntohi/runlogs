@@ -1,15 +1,15 @@
 
 /* Class = "UITextField"; accessibilityHint = "Username"; ObjectID = "7vI-98-nHi"; */
-"7vI-98-nHi.accessibilityHint" = "Utilizator";
+"7vI-98-nHi.accessibilityHint" = "Email";
 
 /* Class = "UITextField"; accessibilityIdentifier = "username"; ObjectID = "7vI-98-nHi"; */
-"7vI-98-nHi.accessibilityIdentifier" = "utilizator";
+"7vI-98-nHi.accessibilityIdentifier" = "email";
 
 /* Class = "UITextField"; accessibilityLabel = "Username"; ObjectID = "7vI-98-nHi"; */
-"7vI-98-nHi.accessibilityLabel" = "Utilizator";
+"7vI-98-nHi.accessibilityLabel" = "Email";
 
 /* Class = "UITextField"; placeholder = "username"; ObjectID = "7vI-98-nHi"; */
-"usernamePlaceholder" = "utilizator";
+"usernamePlaceholder" = "email";
 
 /* Class = "UIButton"; accessibilityHint = "Create account"; ObjectID = "bod-ap-hv6"; */
 "bod-ap-hv6.accessibilityHint" = "Create account";
@@ -20,8 +20,10 @@
 /* Class = "UIButton"; accessibilityLabel = "Sign up"; ObjectID = "bod-ap-hv6"; */
 "bod-ap-hv6.accessibilityLabel" = "Sign up";
 
-/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "bod-ap-hv6"; */
-"bod-ap-hv6.normalTitle" = "Sign up";
+"signup" = "Sign up";
+"login" = "Log in";
+"recoverPassword" = "Forgot your password?";
+"rememberedPassword" = "Remembered your password?";
 
 /* Class = "UIButton"; accessibilityHint = "Recover password"; ObjectID = "btq-hY-kg0"; */
 "btq-hY-kg0.accessibilityHint" = "Recover password";
