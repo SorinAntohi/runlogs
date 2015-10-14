@@ -29,7 +29,7 @@ class AuthViewModelTests: XCTestCase {
     let authViewModel = AuthViewModel()
     let usernamePlaceholder = authViewModel.usernamePlaceholder()!
     
-    XCTAssert(usernamePlaceholder.string == "username", "Incorrect username placeholder value!")
+    XCTAssert(usernamePlaceholder.string == "email", "Incorrect username placeholder value!")
   }
   
   func testThatUsernamePlaceholderHasCorrectRomanianValue()
@@ -41,7 +41,7 @@ class AuthViewModelTests: XCTestCase {
     let authViewModel = AuthViewModel()
     let usernamePlaceholder = authViewModel.usernamePlaceholder()!
     
-    XCTAssert(usernamePlaceholder.string == "utilizator", "Incorrect username placeholder value!")
+    XCTAssert(usernamePlaceholder.string == "email", "Incorrect username placeholder value!")
   }
   
   func testThatPasswordPlaceholderHasCorrectEnglishValue()

@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		56F5855B1BCBFB6B00C87158 /* RunLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F5855B1BCBFB6B00C87158 /* Run Logs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run Logs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56F585601BCBFB6B00C87158 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		56F585631BCBFB6B00C87158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		56F5855C1BCBFB6B00C87158 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56F5855B1BCBFB6B00C87158 /* RunLogs.app */,
+				56F5855B1BCBFB6B00C87158 /* Run Logs.app */,
 				56F585721BCBFB6B00C87158 /* RunLogs.xctest */,
 				56F5857D1BCBFB6B00C87158 /* RunLogs.xctest */,
 			);
@@ -201,7 +201,7 @@
 			);
 			name = RunLogs;
 			productName = SportLogs;
-			productReference = 56F5855B1BCBFB6B00C87158 /* RunLogs.app */;
+			productReference = 56F5855B1BCBFB6B00C87158 /* Run Logs.app */;
 			productType = "com.apple.product-type.application";
 		};
 		56F585711BCBFB6B00C87158 /* RunLogsTests */ = {
@@ -473,7 +473,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.SportLogs;
-				PRODUCT_NAME = RunLogs;
+				PRODUCT_NAME = "Run Logs";
 			};
 			name = Debug;
 		};
@@ -486,7 +486,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.SportLogs;
-				PRODUCT_NAME = RunLogs;
+				PRODUCT_NAME = "Run Logs";
 			};
 			name = Release;
 		};
