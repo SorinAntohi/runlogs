@@ -17,7 +17,7 @@
 		56F585921BCC36D000C87158 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56F585911BCC36D000C87158 /* intro.mp4 */; settings = {ASSET_TAGS = (); }; };
 		56F5859D1BCC5BC100C87158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */; settings = {ASSET_TAGS = (); }; };
 		56F5859E1BCC5BC100C87158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		56F585A01BCD261000C87158 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859F1BCD261000C87158 /* LoginViewModelTests.swift */; settings = {ASSET_TAGS = (); }; };
+		56F585A01BCD261000C87158 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859F1BCD261000C87158 /* AuthViewModelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		56F585A81BCD34AD00C87158 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */; settings = {ASSET_TAGS = (); }; };
 		56F585A91BCD34AD00C87158 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */; settings = {ASSET_TAGS = (); }; };
 		56F585AD1BCD544A00C87158 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F585AC1BCD544A00C87158 /* AVFoundation.framework */; };
@@ -57,7 +57,7 @@
 		56F585831BCBFB6B00C87158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56F585911BCC36D000C87158 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = Resources/intro.mp4; sourceTree = SOURCE_ROOT; };
 		56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		56F5859F1BCD261000C87158 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		56F5859F1BCD261000C87158 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		56F585A41BCD2E7700C87158 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Main.strings; sourceTree = "<group>"; };
 		56F585A51BCD2EB500C87158 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 				56F585981BCC383700C87158 /* Frameworks */,
 				56F5855D1BCBFB6B00C87158 /* SportLogs */,
 				56F585931BCC36D500C87158 /* Resources */,
-				56F585751BCBFB6B00C87158 /* SportLogsTests */,
-				56F585801BCBFB6B00C87158 /* SportLogsUITests */,
+				56F585751BCBFB6B00C87158 /* RunLogsTests */,
+				56F585801BCBFB6B00C87158 /* RunLogsUITests */,
 				56F5855C1BCBFB6B00C87158 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,21 +130,23 @@
 			path = SportLogs;
 			sourceTree = "<group>";
 		};
-		56F585751BCBFB6B00C87158 /* SportLogsTests */ = {
+		56F585751BCBFB6B00C87158 /* RunLogsTests */ = {
 			isa = PBXGroup;
 			children = (
 				56F585781BCBFB6B00C87158 /* Info.plist */,
-				56F5859F1BCD261000C87158 /* LoginViewModelTests.swift */,
+				56F5859F1BCD261000C87158 /* AuthViewModelTests.swift */,
 			);
+			name = RunLogsTests;
 			path = SportLogsTests;
 			sourceTree = "<group>";
 		};
-		56F585801BCBFB6B00C87158 /* SportLogsUITests */ = {
+		56F585801BCBFB6B00C87158 /* RunLogsUITests */ = {
 			isa = PBXGroup;
 			children = (
 				56F585811BCBFB6B00C87158 /* SportLogsUITests.swift */,
 				56F585831BCBFB6B00C87158 /* Info.plist */,
 			);
+			name = RunLogsUITests;
 			path = SportLogsUITests;
 			sourceTree = "<group>";
 		};
@@ -331,7 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56F585A91BCD34AD00C87158 /* LocalizedStrings.swift in Sources */,
-				56F585A01BCD261000C87158 /* LoginViewModelTests.swift in Sources */,
+				56F585A01BCD261000C87158 /* AuthViewModelTests.swift in Sources */,
 				56F5859E1BCC5BC100C87158 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

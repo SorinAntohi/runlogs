@@ -8,7 +8,7 @@
 
 import XCTest
 
-class LoginViewModelTests: XCTestCase {
+class AuthViewModelTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
