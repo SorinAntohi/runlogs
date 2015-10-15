@@ -24,9 +24,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var inputsStackCenterConstraint: NSLayoutConstraint!
   
   @IBOutlet weak var passwordStackView: UIView!
-  @IBOutlet weak var switchViewMode: UIButton!
-  @IBOutlet weak var recoverPassword: UIButton!
-  @IBOutlet weak var terms: UIButton!
+  @IBOutlet weak var switchViewModeButton: UIButton!
+  @IBOutlet weak var recoverPasswordButton: UIButton!
+  @IBOutlet weak var termsButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -40,10 +40,10 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     
     setupBlurEfectUnderView(formView)
     
-    switchViewMode.setTitle(viewModel?.switchViewModeTitle(), forState: UIControlState.Normal)
-    recoverPassword.setTitle(viewModel?.recoverPasswordTitle(), forState: UIControlState.Normal)
-    terms.setTitle(viewModel?.termsTitle(), forState: UIControlState.Normal)
-    switchTermsVisibility()
+    switchViewModeButton.setTitle(viewModel?.viewModeButtonTitle(), forState: UIControlState.Normal)
+    recoverPasswordButton.setTitle(viewModel?.recoverPasswordButtonTitle(), forState: UIControlState.Normal)
+    termsButton.setTitle(viewModel?.termsButtonTitle(), forState: UIControlState.Normal)
+    switchTermsButtonVisibility()
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
   }
@@ -61,20 +61,22 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   }
   
   //IBActions
-  @IBAction func onSwitchViewMode(sender: AnyObject)
+  @IBAction func onSwitchViewMode(sender: UIButton)
   {
-    viewModel?.switchViewMode()
-    
-    switchViewMode.setTitle(viewModel?.switchViewModeTitle(), forState: UIControlState.Normal)
-    
-    switchRecoverPasswordVisibility()
-    switchTermsVisibility()
-    
-    if(viewModel?.viewMode == ViewMode.Register && viewModel?.recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword)
+    if(viewModel?.isInRegisterViewMode((sender.titleLabel?.text)!) == true)
     {
-      switchRecoverPasswordMode()
-      switchPasswordVisibility()
+      viewModel?.switchToLoginViewMode()
     }
+    else
+    {
+      viewModel?.switchToRegisterViewMode()
+      updateRecoverPasswordButtonTitle()
+    }
+    
+    switchViewModeButton.setTitle(viewModel?.viewModeButtonTitle(), forState: UIControlState.Normal)
+    switchRecoverPasswordButtonVisibility()
+    switchPasswordVisibility()
+    switchTermsButtonVisibility()
   }
   
   @IBAction func onTerms(sender: AnyObject)
@@ -84,8 +86,17 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   
   @IBAction func recoverPassword(sender: AnyObject)
   {
+    if viewModel?.viewMode == ViewMode.RecoverPassword
+    {
+      viewModel?.switchToLoginViewMode()
+    }
+    else
+    {
+      viewModel?.switchToRecoverPasswordViewMode()
+    }
+    
     formViewTapped(self.view)
-    switchRecoverPasswordMode()
+    updateRecoverPasswordButtonTitle()
     switchPasswordVisibility()
     username.returnKeyType = viewModel!.usernameReturnKeyType()
   }
@@ -193,20 +204,19 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   }
   
   //Actions
-  func switchRecoverPasswordMode()
+  func updateRecoverPasswordButtonTitle()
   {
-    viewModel?.switchRecoverPasswordMode()
-    recoverPassword.setTitle(viewModel?.recoverPasswordTitle(), forState: UIControlState.Normal)
+    recoverPasswordButton.setTitle(viewModel?.recoverPasswordButtonTitle(), forState: UIControlState.Normal)
   }
   
-  func switchRecoverPasswordVisibility()
+  func switchRecoverPasswordButtonVisibility()
   {
     UIView.transitionWithView(passwordStackView,
       duration: 0.4,
       options: UIViewAnimationOptions.CurveLinear,
       animations: { () -> Void in
-        self.recoverPassword.alpha = self.viewModel?.viewMode == ViewMode.Register ? 0.0 : 1.0
-        self.recoverPassword.hidden = self.viewModel?.viewMode == ViewMode.Register
+        self.recoverPasswordButton.alpha = self.viewModel?.viewMode == ViewMode.Register ? 0.0 : 1.0
+        self.recoverPasswordButton.hidden = self.viewModel?.viewMode == ViewMode.Register
       },
       completion:nil)
   }
@@ -217,19 +227,19 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
       duration: 0.4,
       options: UIViewAnimationOptions.TransitionCrossDissolve,
       animations: { () -> Void in
-        self.passwordStackView.alpha = self.viewModel?.recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword ? 0.0 : 1.0
-        self.passwordStackView.hidden = self.viewModel?.recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword
+        self.passwordStackView.alpha = self.viewModel?.viewMode == ViewMode.RecoverPassword ? 0.0 : 1.0
+        self.passwordStackView.hidden = self.viewModel?.viewMode == ViewMode.RecoverPassword
       },
       completion:nil)
   }
   
-  func switchTermsVisibility()
+  func switchTermsButtonVisibility()
   {
-    UIView.transitionWithView(terms,
+    UIView.transitionWithView(termsButton,
       duration: 0.4,
       options: UIViewAnimationOptions.CurveLinear,
       animations: { () -> Void in
-        self.terms.alpha = self.viewModel?.viewMode == ViewMode.Login ? 0.0 : 1.0
+        self.termsButton.alpha = self.viewModel?.viewMode == ViewMode.Login ? 0.0 : 1.0
       },
       completion:nil)
   }

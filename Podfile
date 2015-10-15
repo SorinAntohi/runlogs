@@ -7,7 +7,6 @@ xcodeproj 'RunLogs.xcodeproj'
 target 'RunLogs' do
 
 pod "TSMessages"
-pod "SwiftState"
 
 end
 

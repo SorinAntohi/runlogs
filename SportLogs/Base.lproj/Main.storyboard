@@ -132,18 +132,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TCS-Nl-fwb" userLabel="Bottom Stack View">
                                         <rect key="frame" x="0.0" y="538" width="560" height="42"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="signUp" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bod-ap-hv6">
+                                            <button opaque="NO" tag="990" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="signUp" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JO-P8-bYd">
                                                 <rect key="frame" x="0.0" y="0.0" width="52" height="42"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Create account" identifier="signUp" label="Sign up"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="42" id="Stb-ke-i2W"/>
+                                                    <constraint firstAttribute="height" constant="42" id="RLS-PI-eWN"/>
                                                 </constraints>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="4"/>
                                                 <state key="normal" title="Sign up">
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onSwitchViewMode:" destination="d9N-Ee-3Wg" eventType="touchUpInside" id="ODo-6j-EE6"/>
+                                                    <action selector="onSwitchViewMode:" destination="d9N-Ee-3Wg" eventType="touchUpInside" id="W1P-Fo-t3i"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="terms" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIH-MD-gG1" userLabel="Terms">
@@ -195,9 +195,9 @@
                         <outlet property="inputsStackCenterConstraint" destination="HqF-c7-AGV" id="dzd-PC-WB4"/>
                         <outlet property="password" destination="yef-XO-1vy" id="rEo-4F-zsC"/>
                         <outlet property="passwordStackView" destination="cXB-MC-epp" id="Vku-uR-Vpe"/>
-                        <outlet property="recoverPassword" destination="btq-hY-kg0" id="bme-LC-TtV"/>
-                        <outlet property="switchViewMode" destination="bod-ap-hv6" id="dVr-wr-zFi"/>
-                        <outlet property="terms" destination="DIH-MD-gG1" id="mCe-Qd-EsI"/>
+                        <outlet property="recoverPasswordButton" destination="btq-hY-kg0" id="p3R-r3-f3c"/>
+                        <outlet property="switchViewModeButton" destination="3JO-P8-bYd" id="BYf-hR-8V9"/>
+                        <outlet property="termsButton" destination="DIH-MD-gG1" id="nFg-0L-VSP"/>
                         <outlet property="username" destination="7vI-98-nHi" id="P0m-3w-iyc"/>
                     </connections>
                 </viewController>

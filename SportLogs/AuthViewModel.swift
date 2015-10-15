@@ -13,18 +13,12 @@ enum ViewMode
 {
   case Login
   case Register
-}
-
-enum RecoverPasswordViewMode
-{
   case RecoverPassword
-  case RememberedPassword
 }
 
 class AuthViewModel {
   
   var viewMode:ViewMode = ViewMode.Login
-  var recoverPasswordViewMode:RecoverPasswordViewMode = RecoverPasswordViewMode.RecoverPassword
   
   func usernamePlaceholder() -> NSAttributedString?
   {
@@ -45,7 +39,7 @@ class AuthViewModel {
   
   func usernameReturnKeyType() -> UIReturnKeyType
   {
-    if(recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword)
+    if(viewMode == ViewMode.RecoverPassword)
     {
       return UIReturnKeyType.Go;
     }
@@ -55,7 +49,7 @@ class AuthViewModel {
     }
   }
   
-  func switchViewModeTitle() -> String?
+  func viewModeButtonTitle() -> String?
   {
     if(viewMode == ViewMode.Login)
     {
@@ -67,9 +61,9 @@ class AuthViewModel {
     }
   }
   
-  func recoverPasswordTitle() -> String?
+  func recoverPasswordButtonTitle() -> String?
   {
-    if(recoverPasswordViewMode == RecoverPasswordViewMode.RecoverPassword)
+    if(viewMode != ViewMode.RecoverPassword)
     {
       return LocalizedStrings().stringForKey("recoverPassword", comment: "")
     }
@@ -79,39 +73,35 @@ class AuthViewModel {
     }
   }
   
-  func termsTitle() -> String?
+  func isInRegisterViewMode(title:String) -> Bool
+  {
+    return title == LocalizedStrings().stringForKey("login", comment: "")
+  }
+  
+  func termsButtonTitle() -> String?
   {
     return LocalizedStrings().stringForKey("terms", comment: "")
     
   }
   
-  func switchViewMode()
+  func switchToRecoverPasswordViewMode()
   {
-    if(viewMode == ViewMode.Login)
-    {
-      viewMode = ViewMode.Register
-    }
-    else
-    {
-      viewMode = ViewMode.Login
-    }
+    viewMode = ViewMode.RecoverPassword
   }
   
-  func switchRecoverPasswordMode()
+  func switchToLoginViewMode()
   {
-    if(recoverPasswordViewMode == RecoverPasswordViewMode.RecoverPassword)
-    {
-      recoverPasswordViewMode = RecoverPasswordViewMode.RememberedPassword
-    }
-    else
-    {
-      recoverPasswordViewMode = RecoverPasswordViewMode.RecoverPassword
-    }
+    viewMode = ViewMode.Login
+  }
+  
+  func switchToRegisterViewMode()
+  {
+    viewMode = ViewMode.Register
   }
   
   func submitForm(username:String?, password: String?)
   {
-    if recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword
+    if viewMode == ViewMode.RecoverPassword
     {
       //TODO
       //request password reset
