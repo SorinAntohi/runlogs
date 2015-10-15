@@ -1,0 +1,16 @@
+PODS:
+  - HexColors (2.2.1)
+  - SwiftState (3.0.0)
+  - TSMessages (0.9.12):
+    - HexColors (~> 2.2.0)
+
+DEPENDENCIES:
+  - SwiftState
+  - TSMessages
+
+SPEC CHECKSUMS:
+  HexColors: abfd172e329dab59888614ccba6f216cec59289d
+  SwiftState: 5b5495bd30e240e9b5cb22b0367738d5271dcf34
+  TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
+
+COCOAPODS: 0.39.0
