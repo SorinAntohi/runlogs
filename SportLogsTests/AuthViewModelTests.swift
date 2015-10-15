@@ -16,7 +16,12 @@ class AuthViewModelTests: XCTestCase {
   }
   
   override func tearDown() {
+    
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    let nsDefault = NSUserDefaults.standardUserDefaults()
+    nsDefault.setObject(["en"], forKey: "AppleLanguages")
+    nsDefault.synchronize()
+    
     super.tearDown()
   }
   
@@ -66,5 +71,29 @@ class AuthViewModelTests: XCTestCase {
     let passwordPlaceholder = authViewModel.passwordPlaceholder()!
     
     XCTAssert(passwordPlaceholder.string == "parola", "Incorrect password placeholder value!");
+  }
+  
+  func testThatTermsTitleHasCorrectEnglishValue()
+  {
+    let nsDefault = NSUserDefaults.standardUserDefaults()
+    nsDefault.setObject(["en"], forKey: "AppleLanguages")
+    nsDefault.synchronize()
+    
+    let authViewModel = AuthViewModel()
+    let termsTitle = authViewModel.termsTitle()!
+    
+    XCTAssert(termsTitle == "Terms", "Incorrect terms title value!");
+  }
+  
+  func testThatTermsTitleHasCorrectRomanianValue()
+  {
+    let nsDefault = NSUserDefaults.standardUserDefaults()
+    nsDefault.setObject(["ro"], forKey: "AppleLanguages")
+    nsDefault.synchronize()
+    
+    let authViewModel = AuthViewModel()
+    let termsTitle = authViewModel.termsTitle()!
+    
+    XCTAssert(termsTitle == "Conditii de utilizare", "Incorrect terms title value!");
   }
 }

@@ -24,6 +24,7 @@
 "login" = "Log in";
 "recoverPassword" = "Forgot your password?";
 "rememberedPassword" = "Remembered your password?";
+"terms" = "Terms";
 
 /* Class = "UIButton"; accessibilityHint = "Recover password"; ObjectID = "btq-hY-kg0"; */
 "btq-hY-kg0.accessibilityHint" = "Recover password";

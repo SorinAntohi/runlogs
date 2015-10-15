@@ -43,6 +43,18 @@ class AuthViewModel {
     return NSBundle.mainBundle().pathForResource("intro", ofType:"mp4")
   }
   
+  func usernameReturnKeyType() -> UIReturnKeyType
+  {
+    if(recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword)
+    {
+      return UIReturnKeyType.Go;
+    }
+    else
+    {
+      return UIReturnKeyType.Next;
+    }
+  }
+  
   func switchViewModeTitle() -> String?
   {
     if(viewMode == ViewMode.Login)
@@ -67,6 +79,12 @@ class AuthViewModel {
     }
   }
   
+  func termsTitle() -> String?
+  {
+    return LocalizedStrings().stringForKey("terms", comment: "")
+    
+  }
+  
   func switchViewMode()
   {
     if(viewMode == ViewMode.Login)
@@ -88,6 +106,28 @@ class AuthViewModel {
     else
     {
       recoverPasswordViewMode = RecoverPasswordViewMode.RecoverPassword
+    }
+  }
+  
+  func submitForm(username:String?, password: String?)
+  {
+    if recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword
+    {
+      //TODO
+      //request password reset
+    }
+    else
+    {
+      if viewMode == ViewMode.Login
+      {
+        //TODO
+        //login current user
+      }
+      else
+      {
+        //TODO
+        //register current user
+      }
     }
   }
 }

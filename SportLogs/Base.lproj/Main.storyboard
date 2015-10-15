@@ -24,7 +24,7 @@
         <!--Login View Controller-->
         <scene sceneID="bVY-Vb-43n">
             <objects>
-                <viewController id="d9N-Ee-3Wg" userLabel="Login View Controller" customClass="AuthViewController" customModule="SportLogs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d9N-Ee-3Wg" userLabel="Login View Controller" customClass="AuthViewController" customModule="RunLogs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NhK-TG-9zY"/>
                         <viewControllerLayoutGuide type="bottom" id="Q2c-FC-3Fk"/>
@@ -42,7 +42,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhr-l5-LNE" userLabel="username">
                                                 <rect key="frame" x="0.0" y="0.0" width="516" height="43"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="login_username" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="username" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="7vI-98-nHi">
+                                                    <textField opaque="NO" clipsSubviews="YES" tag="990" contentMode="scaleToFill" restorationIdentifier="login_username" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="username" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="7vI-98-nHi">
                                                         <rect key="frame" x="4" y="0.0" width="512" height="40"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <accessibility key="accessibilityConfiguration" hint="Username" identifier="username" label="Username"/>
@@ -51,7 +51,10 @@
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="d9N-Ee-3Wg" id="G4A-Qh-MYs"/>
+                                                        </connections>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sye-NB-75X" userLabel="spacer">
                                                         <rect key="frame" x="0.0" y="42" width="516" height="1"/>
@@ -75,7 +78,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXB-MC-epp" userLabel="password">
                                                 <rect key="frame" x="0.0" y="47" width="516" height="43"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="login_password" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="password" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="yef-XO-1vy">
+                                                    <textField opaque="NO" clipsSubviews="YES" tag="991" contentMode="scaleToFill" restorationIdentifier="login_password" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="password" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="yef-XO-1vy">
                                                         <rect key="frame" x="4" y="0.0" width="512" height="40"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <accessibility key="accessibilityConfiguration" hint="Password field" identifier="password" label="Password"/>
@@ -84,7 +87,10 @@
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="d9N-Ee-3Wg" id="4zG-Gm-Ejc"/>
+                                                        </connections>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6n-KR-QMR" userLabel="spacer">
                                                         <rect key="frame" x="0.0" y="42" width="516" height="1"/>
@@ -127,7 +133,7 @@
                                         <rect key="frame" x="0.0" y="538" width="560" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="signUp" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bod-ap-hv6">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="42"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Create account" identifier="signUp" label="Sign up"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="Stb-ke-i2W"/>
@@ -138,6 +144,20 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="onSwitchViewMode:" destination="d9N-Ee-3Wg" eventType="touchUpInside" id="ODo-6j-EE6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="terms" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIH-MD-gG1" userLabel="Terms">
+                                                <rect key="frame" x="517" y="0.0" width="43" height="42"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Terms" identifier="terms" label="Terms"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="AAW-8u-dC4"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="4"/>
+                                                <state key="normal" title="Terms">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onTerms:" destination="d9N-Ee-3Wg" eventType="touchUpInside" id="sMF-IQ-qh6"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -177,6 +197,7 @@
                         <outlet property="passwordStackView" destination="cXB-MC-epp" id="Vku-uR-Vpe"/>
                         <outlet property="recoverPassword" destination="btq-hY-kg0" id="bme-LC-TtV"/>
                         <outlet property="switchViewMode" destination="bod-ap-hv6" id="dVr-wr-zFi"/>
+                        <outlet property="terms" destination="DIH-MD-gG1" id="mCe-Qd-EsI"/>
                         <outlet property="username" destination="7vI-98-nHi" id="P0m-3w-iyc"/>
                     </connections>
                 </viewController>

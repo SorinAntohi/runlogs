@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import QuartzCore
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, UITextFieldDelegate {
   
   var viewModel:AuthViewModel?
   var avPlayerLayer:AVPlayerLayer?
@@ -26,6 +26,7 @@ class AuthViewController: UIViewController {
   @IBOutlet weak var passwordStackView: UIView!
   @IBOutlet weak var switchViewMode: UIButton!
   @IBOutlet weak var recoverPassword: UIButton!
+  @IBOutlet weak var terms: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,10 +37,13 @@ class AuthViewController: UIViewController {
     hideNavigationBar()
     setupInputs()
     setupMoviePlayer(formView.layer)
+    
     setupBlurEfectUnderView(formView)
     
     switchViewMode.setTitle(viewModel?.switchViewModeTitle(), forState: UIControlState.Normal)
     recoverPassword.setTitle(viewModel?.recoverPasswordTitle(), forState: UIControlState.Normal)
+    terms.setTitle(viewModel?.termsTitle(), forState: UIControlState.Normal)
+    switchTermsVisibility()
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
   }
@@ -56,6 +60,7 @@ class AuthViewController: UIViewController {
     return UIStatusBarStyle.LightContent
   }
   
+  //IBActions
   @IBAction func onSwitchViewMode(sender: AnyObject)
   {
     viewModel?.switchViewMode()
@@ -63,6 +68,7 @@ class AuthViewController: UIViewController {
     switchViewMode.setTitle(viewModel?.switchViewModeTitle(), forState: UIControlState.Normal)
     
     switchRecoverPasswordVisibility()
+    switchTermsVisibility()
     
     if(viewModel?.viewMode == ViewMode.Register && viewModel?.recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword)
     {
@@ -71,10 +77,17 @@ class AuthViewController: UIViewController {
     }
   }
   
+  @IBAction func onTerms(sender: AnyObject)
+  {
+    
+  }
+  
   @IBAction func recoverPassword(sender: AnyObject)
   {
+    formViewTapped(self.view)
     switchRecoverPasswordMode()
     switchPasswordVisibility()
+    username.returnKeyType = viewModel!.usernameReturnKeyType()
   }
   
   @IBAction func formViewTapped(sender: AnyObject)
@@ -92,17 +105,7 @@ class AuthViewController: UIViewController {
     }
   }
   
-  func hideNavigationBar()
-  {
-    self.navigationController?.navigationBarHidden = true
-  }
-
-  func setupInputs()
-  {
-    username.attributedPlaceholder = viewModel?.usernamePlaceholder();
-    password.attributedPlaceholder = viewModel?.passwordPlaceholder();
-  }
-  
+  //MoviePlayer methods
   func setupMoviePlayer(layer:CALayer?)
   {
     
@@ -118,7 +121,15 @@ class AuthViewController: UIViewController {
     self.view.layer.insertSublayer(avPlayerLayer!, below: layer!)
     avPlayer?.play()
   }
+  
+  func moviePlayerReachedEndOfFile(notification: NSNotification)
+  {
+    let currentVideo = notification.object as! AVPlayerItem
+    currentVideo.seekToTime(CMTimeMake(0, 1))
+    avPlayer?.play()
+  }
 
+  //General UI setup
   func setupBlurEfectUnderView(view:UIView?)
   {
     if !UIAccessibilityIsReduceTransparencyEnabled()
@@ -135,13 +146,18 @@ class AuthViewController: UIViewController {
     }
   }
   
-  func moviePlayerReachedEndOfFile(notification: NSNotification)
+  func hideNavigationBar()
   {
-      let currentVideo = notification.object as! AVPlayerItem
-      currentVideo.seekToTime(CMTimeMake(0, 1))
-      avPlayer?.play()
+    self.navigationController?.navigationBarHidden = true
   }
   
+  func setupInputs()
+  {
+    username.attributedPlaceholder = viewModel?.usernamePlaceholder();
+    password.attributedPlaceholder = viewModel?.passwordPlaceholder();
+  }
+  
+  //Notifications
   func keyboardNotification(notification: NSNotification)
   {
     if let userInfo = notification.userInfo
@@ -176,6 +192,7 @@ class AuthViewController: UIViewController {
     }
   }
   
+  //Actions
   func switchRecoverPasswordMode()
   {
     viewModel?.switchRecoverPasswordMode()
@@ -186,7 +203,7 @@ class AuthViewController: UIViewController {
   {
     UIView.transitionWithView(passwordStackView,
       duration: 0.4,
-      options: UIViewAnimationOptions.TransitionCrossDissolve,
+      options: UIViewAnimationOptions.CurveLinear,
       animations: { () -> Void in
         self.recoverPassword.alpha = self.viewModel?.viewMode == ViewMode.Register ? 0.0 : 1.0
         self.recoverPassword.hidden = self.viewModel?.viewMode == ViewMode.Register
@@ -204,6 +221,33 @@ class AuthViewController: UIViewController {
         self.passwordStackView.hidden = self.viewModel?.recoverPasswordViewMode == RecoverPasswordViewMode.RememberedPassword
       },
       completion:nil)
+  }
+  
+  func switchTermsVisibility()
+  {
+    UIView.transitionWithView(terms,
+      duration: 0.4,
+      options: UIViewAnimationOptions.CurveLinear,
+      animations: { () -> Void in
+        self.terms.alpha = self.viewModel?.viewMode == ViewMode.Login ? 0.0 : 1.0
+      },
+      completion:nil)
+  }
+ 
+  //TextFieldDelegate methods
+  func textFieldShouldReturn(textField: UITextField) -> Bool
+  {
+    if textField == username && self.passwordStackView.hidden == false
+    {
+      password.becomeFirstResponder()
+    }
+    else
+    {
+      formViewTapped(self.view)
+      viewModel?.submitForm(username.text, password:password.text)
+    }
+    
+    return false;
   }
 }
 
