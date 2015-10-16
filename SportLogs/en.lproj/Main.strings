@@ -22,7 +22,7 @@
 
 "signup" = "Sign up";
 "login" = "Log in";
-"recoverPassword" = "Forgot your password?";
+"resetPassword" = "Forgot your password?";
 "rememberedPassword" = "Remembered your password?";
 "terms" = "Terms";
 
@@ -49,3 +49,7 @@
 
 /* Class = "UITextField"; placeholder = "password"; ObjectID = "yef-XO-1vy"; */
 "passwordPlaceholder" = "password";
+"genericErrorTitle"="Ooopsss...";
+"genericErrorMessage"="Something wrong happened :(";
+"invalidUsernameOrPasswordErrorMessage"="You've inserted an invalid username or password.";
+"invalidEmailErrorMessage" = "The email address is not valid";

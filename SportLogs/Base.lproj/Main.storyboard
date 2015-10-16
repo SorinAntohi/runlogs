@@ -132,10 +132,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TCS-Nl-fwb" userLabel="Bottom Stack View">
                                         <rect key="frame" x="0.0" y="538" width="560" height="42"/>
                                         <subviews>
-                                            <button opaque="NO" tag="990" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="signUp" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JO-P8-bYd">
-                                                <rect key="frame" x="0.0" y="0.0" width="52" height="42"/>
+                                            <button opaque="NO" tag="990" contentMode="scaleToFill" restorationIdentifier="signUp" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JO-P8-bYd">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Create account" identifier="signUp" label="Sign up"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="5rj-13-sWU"/>
                                                     <constraint firstAttribute="height" constant="42" id="RLS-PI-eWN"/>
                                                 </constraints>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="4"/>
@@ -195,7 +196,7 @@
                         <outlet property="inputsStackCenterConstraint" destination="HqF-c7-AGV" id="dzd-PC-WB4"/>
                         <outlet property="password" destination="yef-XO-1vy" id="rEo-4F-zsC"/>
                         <outlet property="passwordStackView" destination="cXB-MC-epp" id="Vku-uR-Vpe"/>
-                        <outlet property="recoverPasswordButton" destination="btq-hY-kg0" id="p3R-r3-f3c"/>
+                        <outlet property="resetPasswordButton" destination="btq-hY-kg0" id="U7g-ZF-xqh"/>
                         <outlet property="switchViewModeButton" destination="3JO-P8-bYd" id="BYf-hR-8V9"/>
                         <outlet property="termsButton" destination="DIH-MD-gG1" id="nFg-0L-VSP"/>
                         <outlet property="username" destination="7vI-98-nHi" id="P0m-3w-iyc"/>

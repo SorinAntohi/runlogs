@@ -6,7 +6,7 @@ xcodeproj 'RunLogs.xcodeproj'
 
 target 'RunLogs' do
 
-pod "TSMessages"
+pod "TSMessages", :git => 'https://github.com/KrauseFx/TSMessages.git'
 
 end
 

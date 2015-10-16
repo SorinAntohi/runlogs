@@ -13,7 +13,12 @@ enum ViewMode
 {
   case Login
   case Register
-  case RecoverPassword
+  case ResetPassword
+}
+
+enum InputError: ErrorType {
+  case InvalidEmail
+  case InvalidUsernameOrPassword
 }
 
 class AuthViewModel {
@@ -39,7 +44,7 @@ class AuthViewModel {
   
   func usernameReturnKeyType() -> UIReturnKeyType
   {
-    if(viewMode == ViewMode.RecoverPassword)
+    if(viewMode == ViewMode.ResetPassword)
     {
       return UIReturnKeyType.Go;
     }
@@ -61,11 +66,11 @@ class AuthViewModel {
     }
   }
   
-  func recoverPasswordButtonTitle() -> String?
+  func resetPasswordButtonTitle() -> String?
   {
-    if(viewMode != ViewMode.RecoverPassword)
+    if(viewMode != ViewMode.ResetPassword)
     {
-      return LocalizedStrings().stringForKey("recoverPassword", comment: "")
+      return LocalizedStrings().stringForKey("resetPassword", comment: "")
     }
     else
     {
@@ -84,9 +89,29 @@ class AuthViewModel {
     
   }
   
+  func invalidCredentialsErrorMessage() -> String?
+  {
+    return LocalizedStrings().stringForKey("invalidUsernameOrPasswordErrorMessage", comment: "")
+  }
+  
+  func genericErrorTitle() -> String?
+  {
+    return LocalizedStrings().stringForKey("genericErrorTitle", comment: "")
+  }
+  
+  func genericErrorMessage() -> String?
+  {
+    return LocalizedStrings().stringForKey("genericErrorMessage", comment: "")
+  }
+  
+  func invalidEmailErrorMessage() -> String?
+  {
+    return LocalizedStrings().stringForKey("invalidEmailErrorMessage", comment: "")
+  }
+  
   func switchToRecoverPasswordViewMode()
   {
-    viewMode = ViewMode.RecoverPassword
+    viewMode = ViewMode.ResetPassword
   }
   
   func switchToLoginViewMode()
@@ -99,25 +124,48 @@ class AuthViewModel {
     viewMode = ViewMode.Register
   }
   
-  func submitForm(username:String?, password: String?)
+  func submitForm(username:String?, password: String?) throws
   {
-    if viewMode == ViewMode.RecoverPassword
+    if viewMode == ViewMode.ResetPassword
     {
-      //TODO
-      //request password reset
-    }
-    else
-    {
-      if viewMode == ViewMode.Login
+      if let email = username where removeWhiteSpacesFromString(email).characters.count > 0
       {
-        //TODO
-        //login current user
+        let resetPasswordService = ResetPasswordService()
+        resetPasswordService.resetPasswordForEmail(email)
       }
       else
       {
-        //TODO
-        //register current user
+        throw InputError.InvalidEmail
       }
     }
+    else if viewMode == ViewMode.Login
+    {
+      if let user = username, pass = password where removeWhiteSpacesFromString(user).characters.count > 0 && removeWhiteSpacesFromString(pass).characters.count > 0
+      {
+        let loginService = LoginService()
+        loginService.loginUser(user,password: pass)
+      }
+      else
+      {
+        throw InputError.InvalidUsernameOrPassword
+      }
+    }
+    else
+    {
+      if let user = username, pass = password where removeWhiteSpacesFromString(user).characters.count > 0 && removeWhiteSpacesFromString(pass).characters.count > 0
+      {
+        let registerService = RegisterService()
+        registerService.registerUser(user,password:pass)
+      }
+      else
+      {
+        throw InputError.InvalidUsernameOrPassword
+      }
+    }
+  }
+  
+  func removeWhiteSpacesFromString(value:String) -> String
+  {
+    return value.stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: nil)
   }
 }

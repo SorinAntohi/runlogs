@@ -23,7 +23,7 @@
 "signup" = "Sign up";
 "login" = "Log in";
 "recoverPassword" = "Forgot your password?";
-"rememberedPassword" = "Remembered your password?";
+"resetPassword" = "Remembered your password?";
 "terms" = "Conditii de utilizare";
 
 /* Class = "UIButton"; accessibilityHint = "Recover password"; ObjectID = "btq-hY-kg0"; */
@@ -49,3 +49,8 @@
 
 /* Class = "UITextField"; placeholder = "password"; ObjectID = "yef-XO-1vy"; */
 "passwordPlaceholder" = "parola";
+
+"genericErrorTitle"="Ooopsss...";
+"genericErrorMessage"="Something wrong happened :(";
+"invalidUsernameOrPasswordErrorMessage"="You've inserted an invalid username or password.";
+"invalidEmailErrorMessage" = "The email address is not valid";

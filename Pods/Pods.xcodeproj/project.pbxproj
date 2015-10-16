@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00700EF540A9556189139F0C9A6F502A /* NotificationBackgroundSuccessIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 350145D63239B67739F3A7AD6C2B20F1 /* NotificationBackgroundSuccessIcon@2x.png */; };
-		0F09B9486ECFAFED088754AF63EBDA9E /* HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C68F1961FC1BA927EDD7E7C37477213 /* HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12AD2DC2E4F3EBFF6AECE7A530220D47 /* NotificationBackgroundSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A82FDA4357E1E3E19394760D2B9289 /* NotificationBackgroundSuccess@2x.png */; };
 		27796E703D7EC44708CB76B30564C8C7 /* NotificationBackgroundErrorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B36157D6A274A5C4D6E86DA06FD59B /* NotificationBackgroundErrorIcon.png */; };
 		2D95B8A21249512782CB13B616AA7D59 /* NotificationBackgroundSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = F03FC02A1FA831323BA903C01ABCE79A /* NotificationBackgroundSuccess.png */; };
@@ -17,12 +16,14 @@
 		4346231964B9ED5456A15DAA28BCEBB6 /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398CC94DE37E4EBB2584CA37DFE5CED /* TSMessageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		4A6EE6C7E4312E0C83E860C524BC731F /* Pods-RunLogs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD4C14CD2E2942D47B5F0AB7E69A5DE /* Pods-RunLogs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D7F5EFFE1F4FC28F1F0A275339871DB /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = A0F50DCF07C527689ADD492DF6754268 /* TSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E5B4EEA50BEF0B4D0FE2394D3EB119A /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = B06BE70B80A3C5E96D1B15059685D53C /* HexColors.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		596758BBEC68789E6C8928ECE3FC341C /* HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 044C87D9281C64572B5DCD562A0975D4 /* HexColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A0BAECE3F31DBD5D8C76567D595B27A /* NotificationBackgroundErrorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E523268F2A4649EE31937B3BEE62E /* NotificationBackgroundErrorIcon@2x.png */; };
 		64630384F2FACAFBC520F39D65E7A224 /* NotificationBackgroundMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 988977A4EA35F01B3AF3813AF8EC747A /* NotificationBackgroundMessage@2x.png */; };
 		6D8C5DF1E1F93833E369954B1D9C0820 /* TSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = FE1B3377791CB02620E7A7C53FA9E333 /* TSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AB2C4C6FE609B316E746ADA710D94D8 /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C36993BFED217EFE7CE2167B43CF61 /* NotificationButtonBackground.png */; };
 		801E76F2712F96AE374EBE3E098CA4C8 /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = ECADFB09B07BF69BCF97465F3199202D /* TSMessagesDefaultDesign.json */; };
-		8C91BF53C3EF19AD26723EA56AD4B184 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 285BB9E9F9AE90A9EE0AB6407597CD0B /* HexColor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8DCF5C0EE6AC7543935C51AA756864C0 /* HexColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 552DE2C58B75C7CD334AF66AF7318B87 /* HexColors-dummy.m */; };
 		8F76427BA0FD3E51357ECD7167234284 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD381BF1AD61729FEE7F07775CD07E4 /* Foundation.framework */; };
 		93FAC0F5430B050D8C314AC5B71BA813 /* NotificationBackgroundSuccessIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F93D96D5FEDE02F954AAF354194B6B83 /* NotificationBackgroundSuccessIcon.png */; };
 		98CA2233376E68B34332F06FD2ABFB76 /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFAB8AF9D7683ABA39E9D4A09D49F26 /* TSBlurView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -33,15 +34,14 @@
 		B768EAA4F040B54F0CC187469BE9DEC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD381BF1AD61729FEE7F07775CD07E4 /* Foundation.framework */; };
 		B957B2B457C3187ACC21A2BB3FDFF70E /* NotificationBackgroundWarning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5C338CE5881EDC585A0F06C62C5FF4 /* NotificationBackgroundWarning@2x.png */; };
 		C9D40359714CC91830199847E8DD3A1E /* TSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B8A4055CB1AAD6DB567CEDF93B3F81 /* TSMessages-dummy.m */; };
-		CE984CB467CBD3D2E2F6F06CBB4E408C /* HexColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2193D43987B24CDF2708672CE91CF4 /* HexColors-dummy.m */; };
 		D1BA5803592FEEFBD694774DB9E927E2 /* NotificationBackgroundError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D319145D2475140BB2A8A8FABBB10716 /* NotificationBackgroundError@2x.png */; };
+		D1E92AEC9F093E10C69F2B89A14F49F5 /* HexColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B46C9A7207E9499ABC08FE1423CD53A7 /* HexColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D3348BE443EBBA9AF2E1703B0DFC77 /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDB7996C7558F987A64D4CCDC953DDD /* NotificationBackgroundWarningIcon.png */; };
 		D76FC01577107FEC8AE63EACB45F1FA5 /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1295898824C301E4E9DD80618985C6C0 /* TSMessage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		E48030612C5EEA7838387C1188D38AAE /* NotificationBackgroundWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = F91262943025F8F956B9D397BE0A716E /* NotificationBackgroundWarning.png */; };
 		E8BC643C5892EFE9D2BE1A2767B918EA /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B30BADCF436DB32A4A798A21E875ACE /* NotificationBackgroundError.png */; };
 		EF3E894CABAE8AFB7853D5CF796A1F73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD381BF1AD61729FEE7F07775CD07E4 /* Foundation.framework */; };
 		F9425F3CFDFD3105E1DD983056A213A5 /* NotificationBackgroundMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D471D787922D01A9CFFAF4302766D /* NotificationBackgroundMessage.png */; };
-		FBDCA85F7CFBC3DFA5134DB59A680242 /* HexColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D290F7E7775A98B76D1E85A7227159E4 /* HexColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044C87D9281C64572B5DCD562A0975D4 /* HexColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HexColors.h; path = Classes/HexColors.h; sourceTree = "<group>"; };
 		1295898824C301E4E9DD80618985C6C0 /* TSMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSMessage.m; path = Pod/Classes/TSMessage.m; sourceTree = "<group>"; };
 		22A82FDA4357E1E3E19394760D2B9289 /* NotificationBackgroundSuccess@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundSuccess@2x.png"; path = "Pod/Assets/NotificationBackgroundSuccess@2x.png"; sourceTree = "<group>"; };
-		285BB9E9F9AE90A9EE0AB6407597CD0B /* HexColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HexColor.m; path = Classes/HexColor.m; sourceTree = "<group>"; };
 		2A5751594842132C7C6B0C4BCCDF31E2 /* Pods-RunLogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunLogs.debug.xcconfig"; sourceTree = "<group>"; };
 		2E9D471D787922D01A9CFFAF4302766D /* NotificationBackgroundMessage.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundMessage.png; path = Pod/Assets/NotificationBackgroundMessage.png; sourceTree = "<group>"; };
 		3354460FF45106D03E49B8FF3A6C7816 /* TSMessageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSMessageView.h; path = Pod/Classes/TSMessageView.h; sourceTree = "<group>"; };
@@ -82,35 +82,35 @@
 		43624254070C356738A3B2256C84A1D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5179BEED4E4A73FE96446AE73FA7380C /* Pods-RunLogs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RunLogs-dummy.m"; sourceTree = "<group>"; };
 		5250AEFE01A95D18A630A976A94BA1C8 /* TSMessages.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSMessages.xcconfig; sourceTree = "<group>"; };
-		5449E1F01A34263C9FA182789F176AFA /* HexColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HexColors.modulemap; sourceTree = "<group>"; };
+		552DE2C58B75C7CD334AF66AF7318B87 /* HexColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HexColors-dummy.m"; sourceTree = "<group>"; };
 		59E309926402CC20B5D101348980AD05 /* Pods-RunLogs-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RunLogs-frameworks.sh"; sourceTree = "<group>"; };
 		5BD381BF1AD61729FEE7F07775CD07E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5C2193D43987B24CDF2708672CE91CF4 /* HexColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HexColors-dummy.m"; sourceTree = "<group>"; };
-		5C68F1961FC1BA927EDD7E7C37477213 /* HexColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HexColor.h; path = Classes/HexColor.h; sourceTree = "<group>"; };
+		5C64825317875F7F8E901BAA95D4F54A /* HexColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-prefix.pch"; sourceTree = "<group>"; };
 		5E10F640DB5595F00A67691A1C94595D /* Pods-RunLogs-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RunLogs-resources.sh"; sourceTree = "<group>"; };
 		5FD4C14CD2E2942D47B5F0AB7E69A5DE /* Pods-RunLogs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RunLogs-umbrella.h"; sourceTree = "<group>"; };
 		6398CC94DE37E4EBB2584CA37DFE5CED /* TSMessageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSMessageView.m; path = Pod/Classes/TSMessageView.m; sourceTree = "<group>"; };
-		6A069D5AB86CEA5A547B0C4074D0A6F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84860A7B2E220714E1374A3205800A99 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A2E62362DCCA0E428FA0CB1C88DE6F9 /* HexColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-prefix.pch"; sourceTree = "<group>"; };
 		8D99A47C1EB809173D5931DC46B71BB7 /* TSMessages-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSMessages-prefix.pch"; sourceTree = "<group>"; };
 		988977A4EA35F01B3AF3813AF8EC747A /* NotificationBackgroundMessage@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundMessage@2x.png"; path = "Pod/Assets/NotificationBackgroundMessage@2x.png"; sourceTree = "<group>"; };
 		9B30BADCF436DB32A4A798A21E875ACE /* NotificationBackgroundError.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundError.png; path = Pod/Assets/NotificationBackgroundError.png; sourceTree = "<group>"; };
+		9C3CA10B0E95897C12655B68444686CE /* HexColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HexColors.xcconfig; sourceTree = "<group>"; };
 		A0F50DCF07C527689ADD492DF6754268 /* TSBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSBlurView.h; path = Pod/Classes/TSBlurView.h; sourceTree = "<group>"; };
 		AA4788ED60389F2FB120B1DCFD1FC86F /* Pods-RunLogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunLogs.release.xcconfig"; sourceTree = "<group>"; };
 		ADEEA9ADB8251992B1D547D3C41A2BC1 /* NotificationBackgroundWarningIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundWarningIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundWarningIcon@2x.png"; sourceTree = "<group>"; };
+		B06BE70B80A3C5E96D1B15059685D53C /* HexColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HexColors.m; path = Classes/HexColors.m; sourceTree = "<group>"; };
 		B3B8A4055CB1AAD6DB567CEDF93B3F81 /* TSMessages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TSMessages-dummy.m"; sourceTree = "<group>"; };
-		B581A144EF37847C74504D40E728AA71 /* HexColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HexColors.xcconfig; sourceTree = "<group>"; };
+		B46C9A7207E9499ABC08FE1423CD53A7 /* HexColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-umbrella.h"; sourceTree = "<group>"; };
 		B7C36993BFED217EFE7CE2167B43CF61 /* NotificationButtonBackground.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationButtonBackground.png; path = Pod/Assets/NotificationButtonBackground.png; sourceTree = "<group>"; };
 		BA5298DB300D1CEF892F1166285D31A8 /* TSMessages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TSMessages.modulemap; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C00B95BA826F5DB501DA6A24FE33A7FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE1E523268F2A4649EE31937B3BEE62E /* NotificationBackgroundErrorIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundErrorIcon@2x.png"; path = "Pod/Assets/NotificationBackgroundErrorIcon@2x.png"; sourceTree = "<group>"; };
 		CEFAB8AF9D7683ABA39E9D4A09D49F26 /* TSBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSBlurView.m; path = Pod/Classes/TSBlurView.m; sourceTree = "<group>"; };
 		D066CCC04C3E9D670C9260B732A27232 /* TSMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D290F7E7775A98B76D1E85A7227159E4 /* HexColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-umbrella.h"; sourceTree = "<group>"; };
 		D319145D2475140BB2A8A8FABBB10716 /* NotificationBackgroundError@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundError@2x.png"; path = "Pod/Assets/NotificationBackgroundError@2x.png"; sourceTree = "<group>"; };
 		D8EEE05D17F608365F7C5EA3DF4CA3A9 /* HexColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDB7996C7558F987A64D4CCDC953DDD /* NotificationBackgroundWarningIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundWarningIcon.png; path = Pod/Assets/NotificationBackgroundWarningIcon.png; sourceTree = "<group>"; };
+		E0AE0A05A4EE216180C1F99CFCD447E9 /* HexColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HexColors.modulemap; sourceTree = "<group>"; };
 		E8D9DE88E431554D5B1071F3E5207C8B /* Pods_RunLogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECADFB09B07BF69BCF97465F3199202D /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = TSMessagesDefaultDesign.json; path = Pod/Assets/TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
 		ED5D1B8BE01B2CEA6D1A918E826AC373 /* Pods-RunLogs-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RunLogs-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -162,10 +162,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1077E36FB17B4986C14A71BAA76560AA /* HexColors */ = {
+			isa = PBXGroup;
+			children = (
+				044C87D9281C64572B5DCD562A0975D4 /* HexColors.h */,
+				B06BE70B80A3C5E96D1B15059685D53C /* HexColors.m */,
+				5098453C5CC64297F36F734A009E71A4 /* Support Files */,
+			);
+			path = HexColors;
+			sourceTree = "<group>";
+		};
 		230C307D07F5CCB67DCE11EB1EF4DADE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5E6B91A62ADCC816EBC26EB34B6BD8F4 /* HexColors */,
+				1077E36FB17B4986C14A71BAA76560AA /* HexColors */,
 				6AFDCD7729B20C84A76301A616037284 /* TSMessages */,
 			);
 			name = Pods;
@@ -179,14 +189,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5E6B91A62ADCC816EBC26EB34B6BD8F4 /* HexColors */ = {
+		5098453C5CC64297F36F734A009E71A4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5C68F1961FC1BA927EDD7E7C37477213 /* HexColor.h */,
-				285BB9E9F9AE90A9EE0AB6407597CD0B /* HexColor.m */,
-				6FB5B93160043C912E3EA4BF1636AB78 /* Support Files */,
+				E0AE0A05A4EE216180C1F99CFCD447E9 /* HexColors.modulemap */,
+				9C3CA10B0E95897C12655B68444686CE /* HexColors.xcconfig */,
+				552DE2C58B75C7CD334AF66AF7318B87 /* HexColors-dummy.m */,
+				5C64825317875F7F8E901BAA95D4F54A /* HexColors-prefix.pch */,
+				B46C9A7207E9499ABC08FE1423CD53A7 /* HexColors-umbrella.h */,
+				C00B95BA826F5DB501DA6A24FE33A7FA /* Info.plist */,
 			);
-			path = HexColors;
+			name = "Support Files";
+			path = "../Target Support Files/HexColors";
 			sourceTree = "<group>";
 		};
 		6AFDCD7729B20C84A76301A616037284 /* TSMessages */ = {
@@ -220,20 +234,6 @@
 			);
 			name = "Pods-RunLogs";
 			path = "Target Support Files/Pods-RunLogs";
-			sourceTree = "<group>";
-		};
-		6FB5B93160043C912E3EA4BF1636AB78 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5449E1F01A34263C9FA182789F176AFA /* HexColors.modulemap */,
-				B581A144EF37847C74504D40E728AA71 /* HexColors.xcconfig */,
-				5C2193D43987B24CDF2708672CE91CF4 /* HexColors-dummy.m */,
-				8A2E62362DCCA0E428FA0CB1C88DE6F9 /* HexColors-prefix.pch */,
-				D290F7E7775A98B76D1E85A7227159E4 /* HexColors-umbrella.h */,
-				6A069D5AB86CEA5A547B0C4074D0A6F7 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HexColors";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -306,15 +306,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		25BBFC5180BA4CD0F4067A4E1058A01F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F09B9486ECFAFED088754AF63EBDA9E /* HexColor.h in Headers */,
-				FBDCA85F7CFBC3DFA5134DB59A680242 /* HexColors-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2FED4624B273FBA8A6A413AF9C94A8E0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,6 +322,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6EE6C7E4312E0C83E860C524BC731F /* Pods-RunLogs-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D17BEB90EB4C27B46F1BB2CD8FF0C542 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E92AEC9F093E10C69F2B89A14F49F5 /* HexColors-umbrella.h in Headers */,
+				596758BBEC68789E6C8928ECE3FC341C /* HexColors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,9 +379,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 120D0B17EB9DEF64F2E1BC979F24A556 /* Build configuration list for PBXNativeTarget "HexColors" */;
 			buildPhases = (
-				525846ACE59F44A9D0EB6B9BA8391444 /* Sources */,
+				67EF9044B76E629170DD09EE2E94E76D /* Sources */,
 				4BA155DC3466C96A26E2FED0479F99BA /* Frameworks */,
-				25BBFC5180BA4CD0F4067A4E1058A01F /* Headers */,
+				D17BEB90EB4C27B46F1BB2CD8FF0C542 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -456,12 +456,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		525846ACE59F44A9D0EB6B9BA8391444 /* Sources */ = {
+		67EF9044B76E629170DD09EE2E94E76D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C91BF53C3EF19AD26723EA56AD4B184 /* HexColor.m in Sources */,
-				CE984CB467CBD3D2E2F6F06CBB4E408C /* HexColors-dummy.m in Sources */,
+				8DCF5C0EE6AC7543935C51AA756864C0 /* HexColors-dummy.m in Sources */,
+				4E5B4EEA50BEF0B4D0FE2394D3EB119A /* HexColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +502,7 @@
 /* Begin XCBuildConfiguration section */
 		1721A073E7763C1231F99B7B183E3471 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B581A144EF37847C74504D40E728AA71 /* HexColors.xcconfig */;
+			baseConfigurationReference = 9C3CA10B0E95897C12655B68444686CE /* HexColors.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -559,7 +559,7 @@
 		};
 		2CE686FF7383A8EE787CEB6EC93A8573 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B581A144EF37847C74504D40E728AA71 /* HexColors.xcconfig */;
+			baseConfigurationReference = 9C3CA10B0E95897C12655B68444686CE /* HexColors.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

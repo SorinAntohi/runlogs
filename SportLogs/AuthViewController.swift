@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import QuartzCore
+import TSMessages
 
 class AuthViewController: UIViewController, UITextFieldDelegate {
   
@@ -25,7 +26,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   
   @IBOutlet weak var passwordStackView: UIView!
   @IBOutlet weak var switchViewModeButton: UIButton!
-  @IBOutlet weak var recoverPasswordButton: UIButton!
+  @IBOutlet weak var resetPasswordButton: UIButton!
   @IBOutlet weak var termsButton: UIButton!
   
   override func viewDidLoad() {
@@ -41,7 +42,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     setupBlurEfectUnderView(formView)
     
     switchViewModeButton.setTitle(viewModel?.viewModeButtonTitle(), forState: UIControlState.Normal)
-    recoverPasswordButton.setTitle(viewModel?.recoverPasswordButtonTitle(), forState: UIControlState.Normal)
+    resetPasswordButton.setTitle(viewModel?.resetPasswordButtonTitle(), forState: UIControlState.Normal)
     termsButton.setTitle(viewModel?.termsButtonTitle(), forState: UIControlState.Normal)
     switchTermsButtonVisibility()
     
@@ -70,7 +71,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     else
     {
       viewModel?.switchToRegisterViewMode()
-      updateRecoverPasswordButtonTitle()
+      updateResetPasswordButtonTitle()
     }
     
     switchViewModeButton.setTitle(viewModel?.viewModeButtonTitle(), forState: UIControlState.Normal)
@@ -86,7 +87,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   
   @IBAction func recoverPassword(sender: AnyObject)
   {
-    if viewModel?.viewMode == ViewMode.RecoverPassword
+    if viewModel?.viewMode == ViewMode.ResetPassword
     {
       viewModel?.switchToLoginViewMode()
     }
@@ -96,7 +97,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     }
     
     formViewTapped(self.view)
-    updateRecoverPasswordButtonTitle()
+    updateResetPasswordButtonTitle()
     switchPasswordVisibility()
     username.returnKeyType = viewModel!.usernameReturnKeyType()
   }
@@ -204,9 +205,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   }
   
   //Actions
-  func updateRecoverPasswordButtonTitle()
+  func updateResetPasswordButtonTitle()
   {
-    recoverPasswordButton.setTitle(viewModel?.recoverPasswordButtonTitle(), forState: UIControlState.Normal)
+    resetPasswordButton.setTitle(viewModel?.resetPasswordButtonTitle(), forState: UIControlState.Normal)
   }
   
   func switchRecoverPasswordButtonVisibility()
@@ -215,8 +216,8 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
       duration: 0.4,
       options: UIViewAnimationOptions.CurveLinear,
       animations: { () -> Void in
-        self.recoverPasswordButton.alpha = self.viewModel?.viewMode == ViewMode.Register ? 0.0 : 1.0
-        self.recoverPasswordButton.hidden = self.viewModel?.viewMode == ViewMode.Register
+        self.resetPasswordButton.alpha = self.viewModel?.viewMode == ViewMode.Register ? 0.0 : 1.0
+        self.resetPasswordButton.hidden = self.viewModel?.viewMode == ViewMode.Register
       },
       completion:nil)
   }
@@ -227,8 +228,8 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
       duration: 0.4,
       options: UIViewAnimationOptions.TransitionCrossDissolve,
       animations: { () -> Void in
-        self.passwordStackView.alpha = self.viewModel?.viewMode == ViewMode.RecoverPassword ? 0.0 : 1.0
-        self.passwordStackView.hidden = self.viewModel?.viewMode == ViewMode.RecoverPassword
+        self.passwordStackView.alpha = self.viewModel?.viewMode == ViewMode.ResetPassword ? 0.0 : 1.0
+        self.passwordStackView.hidden = self.viewModel?.viewMode == ViewMode.ResetPassword
       },
       completion:nil)
   }
@@ -254,7 +255,34 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     else
     {
       formViewTapped(self.view)
-      viewModel?.submitForm(username.text, password:password.text)
+      
+      do
+      {
+        try viewModel?.submitForm(username.text, password:password.text)
+      }
+      catch let error as InputError
+      {
+        if error == InputError.InvalidUsernameOrPassword
+        {
+          TSMessage.showNotificationWithTitle(viewModel?.genericErrorTitle(),
+            subtitle: viewModel?.invalidCredentialsErrorMessage(),
+            type: TSMessageNotificationType.Error)
+        }
+        else if error == InputError.InvalidEmail
+        {
+          TSMessage.showNotificationWithTitle(viewModel?.genericErrorTitle(),
+            subtitle: viewModel?.invalidEmailErrorMessage(),
+            type: TSMessageNotificationType.Error)
+        }
+        username.becomeFirstResponder()
+      }
+      catch
+      {
+        //display unknown error message
+        TSMessage.showNotificationWithTitle(viewModel?.genericErrorTitle(),
+          subtitle: viewModel?.genericErrorMessage(),
+          type: TSMessageNotificationType.Error)
+      }
     }
     
     return false;

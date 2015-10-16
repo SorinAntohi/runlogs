@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4F707B6A5A1C98D7B14BFF47 /* Pods_RunLogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC504DA696054721A7E251BD /* Pods_RunLogs.framework */; };
+		56165DA71BD1317D002258B0 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA61BD1317D002258B0 /* LoginService.swift */; settings = {ASSET_TAGS = (); }; };
+		56165DA91BD131E8002258B0 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA81BD131E8002258B0 /* RegisterService.swift */; settings = {ASSET_TAGS = (); }; };
+		56DB86E31BD0DCC400A303BC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */; settings = {ASSET_TAGS = (); }; };
 		56F5855F1BCBFB6B00C87158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */; };
 		56F585611BCBFB6B00C87158 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585601BCBFB6B00C87158 /* AuthViewController.swift */; };
 		56F585641BCBFB6B00C87158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56F585621BCBFB6B00C87158 /* Main.storyboard */; };
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56165DA41BD12F81002258B0 /* RunLogs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunLogs-Bridging-Header.h"; sourceTree = "<group>"; };
+		56165DA61BD1317D002258B0 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		56165DA81BD131E8002258B0 /* RegisterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordService.swift; sourceTree = "<group>"; };
 		56F5855B1BCBFB6B00C87158 /* RunLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56F585601BCBFB6B00C87158 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56DB86E11BD0DCAC00A303BC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */,
+				56165DA61BD1317D002258B0 /* LoginService.swift */,
+				56165DA81BD131E8002258B0 /* RegisterService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		56F585521BCBFB6B00C87158 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				56F585A61BCD347900C87158 /* Utils */,
+				56DB86E11BD0DCAC00A303BC /* Services */,
 				56F5859B1BCC5BAF00C87158 /* ViewModel */,
 				56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */,
 				56F585601BCBFB6B00C87158 /* AuthViewController.swift */,
@@ -112,6 +130,7 @@
 				56F5856A1BCBFB6B00C87158 /* LaunchScreen.storyboard */,
 				56F5856D1BCBFB6B00C87158 /* Info.plist */,
 				56F585651BCBFB6B00C87158 /* SportLogs.xcdatamodeld */,
+				56165DA41BD12F81002258B0 /* RunLogs-Bridging-Header.h */,
 			);
 			name = RunLogs;
 			path = SportLogs;
@@ -218,6 +237,7 @@
 		56F585531BCBFB6B00C87158 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Sorin Antohi";
 				TargetAttributes = {
@@ -332,7 +352,10 @@
 				56F5859D1BCC5BC100C87158 /* AuthViewModel.swift in Sources */,
 				56F585611BCBFB6B00C87158 /* AuthViewController.swift in Sources */,
 				56F585671BCBFB6B00C87158 /* SportLogs.xcdatamodeld in Sources */,
+				56DB86E31BD0DCC400A303BC /* ResetPasswordService.swift in Sources */,
 				56F5855F1BCBFB6B00C87158 /* AppDelegate.swift in Sources */,
+				56165DA91BD131E8002258B0 /* RegisterService.swift in Sources */,
+				56165DA71BD1317D002258B0 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,12 +487,19 @@
 			baseConfigurationReference = B48BA7E9737D864A46603023 /* Pods-RunLogs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = SportLogs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.RunLogs;
 				PRODUCT_NAME = RunLogs;
+				SWIFT_OBJC_BRIDGING_HEADER = "SportLogs/RunLogs-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -478,12 +508,18 @@
 			baseConfigurationReference = 9A26EE95721A40E8E930A7FD /* Pods-RunLogs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = SportLogs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.RunLogs;
 				PRODUCT_NAME = RunLogs;
+				SWIFT_OBJC_BRIDGING_HEADER = "SportLogs/RunLogs-Bridging-Header.h";
 			};
 			name = Release;
 		};
