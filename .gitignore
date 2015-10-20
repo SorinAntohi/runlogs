@@ -25,6 +25,11 @@ DerivedData
 #
 # Pods/
 
+Pods/Pods.xcodeproj/xcuserdata/
+RunLogs.xcodeproj/xcuserdata/
+
+Please move or remove them before you can merge.
+
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
