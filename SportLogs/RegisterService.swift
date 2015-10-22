@@ -10,8 +10,8 @@ import Foundation
 
 class RegisterService {
   
-  func registerUser(email:String, password:String)
+  func registerUser(email:String, password:String) throws
   {
-    
+
   }
 }

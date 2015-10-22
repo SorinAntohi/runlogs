@@ -25,6 +25,8 @@
 "recoverPassword" = "Forgot your password?";
 "resetPassword" = "Remembered your password?";
 "terms" = "Conditii de utilizare";
+"genericSuccessTitle" = "Horaaayyy";
+"recoverPasswordSuccessMessage" = "Parola a fost resetata cu succes. \nVerificati adresa dvs. de email.";
 
 /* Class = "UIButton"; accessibilityHint = "Recover password"; ObjectID = "btq-hY-kg0"; */
 "btq-hY-kg0.accessibilityHint" = "Recover password";

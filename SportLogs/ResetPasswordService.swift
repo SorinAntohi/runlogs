@@ -10,8 +10,8 @@ import UIKit
 
 class ResetPasswordService {
 
-  func resetPasswordForEmail(email:String)
+  func resetPasswordForEmail(email:String) throws
   {
-    
+
   }
 }

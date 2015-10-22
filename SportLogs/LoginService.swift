@@ -8,10 +8,9 @@
 
 import Foundation
 
-
 class LoginService {
 
-  func loginUser(email:String, password:String)
+  func loginUser(email:String, password:String) throws
   {
     
   }

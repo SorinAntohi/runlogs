@@ -25,6 +25,8 @@
 "resetPassword" = "Forgot your password?";
 "rememberedPassword" = "Remembered your password?";
 "terms" = "Terms";
+"genericSuccessTitle" = "Horaaayyy";
+"recoverPasswordSuccessMessage" = "Your password was successfully resetted. \nPlease check your email.";
 
 /* Class = "UIButton"; accessibilityHint = "Recover password"; ObjectID = "btq-hY-kg0"; */
 "btq-hY-kg0.accessibilityHint" = "Recover password";

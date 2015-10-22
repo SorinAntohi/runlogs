@@ -11,7 +11,7 @@ import AVFoundation
 import QuartzCore
 import TSMessages
 
-class AuthViewController: UIViewController, UITextFieldDelegate {
+class AuthViewController: UIViewController, UITextFieldDelegate, AuthViewModelDelegate {
   
   var viewModel:AuthViewModel?
   var avPlayerLayer:AVPlayerLayer?
@@ -34,11 +34,10 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     
     // Do any additional setup after loading the view, typically from a nib.
     viewModel = AuthViewModel()
+    viewModel?.delegate = self;
     
-    hideNavigationBar()
     setupInputs()
     setupMoviePlayer(formView.layer)
-    
     setupBlurEfectUnderView(formView)
     
     switchViewModeButton.setTitle(viewModel?.viewModeButtonTitle(), forState: UIControlState.Normal)
@@ -55,6 +54,10 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    hideNavigationBar()
   }
   
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -82,7 +85,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   
   @IBAction func onTerms(sender: AnyObject)
   {
-    
+    self.performSegueWithIdentifier("TermsSegue", sender: self)
   }
   
   @IBAction func recoverPassword(sender: AnyObject)
@@ -97,9 +100,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     }
     
     formViewTapped(self.view)
-    updateResetPasswordButtonTitle()
-    switchPasswordVisibility()
-    username.returnKeyType = viewModel!.usernameReturnKeyType()
+    switchUIElementsState()
   }
   
   @IBAction func formViewTapped(sender: AnyObject)
@@ -120,7 +121,6 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   //MoviePlayer methods
   func setupMoviePlayer(layer:CALayer?)
   {
-    
     avPlayer = AVPlayer(URL: NSURL.fileURLWithPath(viewModel?.backgroundMoviePath() as! String))
     
     avPlayerLayer = AVPlayerLayer.init()
@@ -167,6 +167,13 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
   {
     username.attributedPlaceholder = viewModel?.usernamePlaceholder();
     password.attributedPlaceholder = viewModel?.passwordPlaceholder();
+  }
+  
+  func switchUIElementsState()
+  {
+    updateResetPasswordButtonTitle()
+    switchPasswordVisibility()
+    username.returnKeyType = viewModel!.usernameReturnKeyType()
   }
   
   //Notifications
@@ -263,29 +270,50 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
       catch let error as InputError
       {
         if error == InputError.InvalidUsernameOrPassword
-        {
-          TSMessage.showNotificationWithTitle(viewModel?.genericErrorTitle(),
-            subtitle: viewModel?.invalidCredentialsErrorMessage(),
-            type: TSMessageNotificationType.Error)
+        { 
+          presentErrorMessage((viewModel?.genericErrorTitle())!, message: (viewModel?.invalidCredentialsErrorMessage())!)
         }
         else if error == InputError.InvalidEmail
         {
-          TSMessage.showNotificationWithTitle(viewModel?.genericErrorTitle(),
-            subtitle: viewModel?.invalidEmailErrorMessage(),
-            type: TSMessageNotificationType.Error)
+          presentErrorMessage((viewModel?.genericErrorTitle())!, message: (viewModel?.invalidEmailErrorMessage())!)
         }
+        
         username.becomeFirstResponder()
       }
       catch
       {
-        //display unknown error message
-        TSMessage.showNotificationWithTitle(viewModel?.genericErrorTitle(),
-          subtitle: viewModel?.genericErrorMessage(),
-          type: TSMessageNotificationType.Error)
+        presentErrorMessage((viewModel?.genericErrorTitle())!, message: (viewModel?.genericErrorMessage())!)
       }
     }
     
     return false;
+  }
+  
+  func presentSuccessMessage(title:String, message:String)
+  {
+    TSMessage.showNotificationWithTitle(title, subtitle: message, type: TSMessageNotificationType.Success)
+  }
+  
+  //AuthViewModelDelegate methods
+  func presentErrorMessage(title:String, message:String)
+  {
+    TSMessage.showNotificationWithTitle(title, subtitle: message, type: TSMessageNotificationType.Error)
+  }
+  
+  func didRegisterSuccessfully()
+  {
+    self.performSegueWithIdentifier("DashboardSegue", sender: self)
+  }
+  
+  func didLoginSuccessfully()
+  {
+    self.performSegueWithIdentifier("DashboardSegue", sender: self)
+  }
+  
+  func didRecoverPasswordSuccessfully()
+  {
+    switchUIElementsState()
+    presentSuccessMessage((viewModel?.genericSuccessTitle())!, message:(viewModel?.recoverPasswordSuccessMessage())!);
   }
 }
 

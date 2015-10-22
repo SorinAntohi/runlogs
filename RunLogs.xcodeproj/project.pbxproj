@@ -8,8 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4F707B6A5A1C98D7B14BFF47 /* Pods_RunLogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC504DA696054721A7E251BD /* Pods_RunLogs.framework */; };
+		560387A81BD6E81100ACBA06 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9DB1BD6D3C000E436DF /* ServiceError.swift */; settings = {ASSET_TAGS = (); }; };
+		560387A91BD6E81500ACBA06 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA81BD131E8002258B0 /* RegisterService.swift */; settings = {ASSET_TAGS = (); }; };
+		560387AA1BD6E81800ACBA06 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA61BD1317D002258B0 /* LoginService.swift */; settings = {ASSET_TAGS = (); }; };
+		560387AB1BD6E81C00ACBA06 /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */; settings = {ASSET_TAGS = (); }; };
+		560387AD1BD7C88300ACBA06 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560387AC1BD7C88300ACBA06 /* UIImage+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		56067E0F1BD82BC400E862BA /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E0E1BD82BC400E862BA /* TermsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		56067E111BD98F3700E862BA /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E101BD98F3700E862BA /* TracksViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		56067E131BD9926E00E862BA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E121BD9926E00E862BA /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		56165DA71BD1317D002258B0 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA61BD1317D002258B0 /* LoginService.swift */; settings = {ASSET_TAGS = (); }; };
 		56165DA91BD131E8002258B0 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA81BD131E8002258B0 /* RegisterService.swift */; settings = {ASSET_TAGS = (); }; };
+		566AC9D81BD6327E00E436DF /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9D71BD6327E00E436DF /* DashboardViewModel.swift */; settings = {ASSET_TAGS = (); }; };
+		566AC9DA1BD6328900E436DF /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9D91BD6328900E436DF /* DashboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		566AC9E01BD6DF4F00E436DF /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9DB1BD6D3C000E436DF /* ServiceError.swift */; settings = {ASSET_TAGS = (); }; };
 		56DB86E31BD0DCC400A303BC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */; settings = {ASSET_TAGS = (); }; };
 		56F5855F1BCBFB6B00C87158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */; };
 		56F585611BCBFB6B00C87158 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585601BCBFB6B00C87158 /* AuthViewController.swift */; };
@@ -38,9 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		560387AC1BD7C88300ACBA06 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		56067E0E1BD82BC400E862BA /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		56067E101BD98F3700E862BA /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
+		56067E121BD9926E00E862BA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		56165DA41BD12F81002258B0 /* RunLogs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunLogs-Bridging-Header.h"; sourceTree = "<group>"; };
 		56165DA61BD1317D002258B0 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		56165DA81BD131E8002258B0 /* RegisterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		566AC9D71BD6327E00E436DF /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		566AC9D91BD6328900E436DF /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		566AC9DB1BD6D3C000E436DF /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordService.swift; sourceTree = "<group>"; };
 		56F5855B1BCBFB6B00C87158 /* RunLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +110,7 @@
 				56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */,
 				56165DA61BD1317D002258B0 /* LoginService.swift */,
 				56165DA81BD131E8002258B0 /* RegisterService.swift */,
+				566AC9DB1BD6D3C000E436DF /* ServiceError.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -125,6 +144,10 @@
 				56F5859B1BCC5BAF00C87158 /* ViewModel */,
 				56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */,
 				56F585601BCBFB6B00C87158 /* AuthViewController.swift */,
+				566AC9D91BD6328900E436DF /* DashboardViewController.swift */,
+				56067E101BD98F3700E862BA /* TracksViewController.swift */,
+				56067E121BD9926E00E862BA /* ProfileViewController.swift */,
+				56067E0E1BD82BC400E862BA /* TermsViewController.swift */,
 				56F585621BCBFB6B00C87158 /* Main.storyboard */,
 				56F585681BCBFB6B00C87158 /* Assets.xcassets */,
 				56F5856A1BCBFB6B00C87158 /* LaunchScreen.storyboard */,
@@ -169,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */,
+				566AC9D71BD6327E00E436DF /* DashboardViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -177,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */,
+				560387AC1BD7C88300ACBA06 /* UIImage+Extension.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -348,12 +373,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566AC9E01BD6DF4F00E436DF /* ServiceError.swift in Sources */,
 				56F585A81BCD34AD00C87158 /* LocalizedStrings.swift in Sources */,
 				56F5859D1BCC5BC100C87158 /* AuthViewModel.swift in Sources */,
+				56067E0F1BD82BC400E862BA /* TermsViewController.swift in Sources */,
+				56067E111BD98F3700E862BA /* TracksViewController.swift in Sources */,
+				560387AD1BD7C88300ACBA06 /* UIImage+Extension.swift in Sources */,
 				56F585611BCBFB6B00C87158 /* AuthViewController.swift in Sources */,
+				566AC9D81BD6327E00E436DF /* DashboardViewModel.swift in Sources */,
 				56F585671BCBFB6B00C87158 /* SportLogs.xcdatamodeld in Sources */,
 				56DB86E31BD0DCC400A303BC /* ResetPasswordService.swift in Sources */,
 				56F5855F1BCBFB6B00C87158 /* AppDelegate.swift in Sources */,
+				566AC9DA1BD6328900E436DF /* DashboardViewController.swift in Sources */,
+				56067E131BD9926E00E862BA /* ProfileViewController.swift in Sources */,
 				56165DA91BD131E8002258B0 /* RegisterService.swift in Sources */,
 				56165DA71BD1317D002258B0 /* LoginService.swift in Sources */,
 			);
@@ -363,9 +395,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560387A81BD6E81100ACBA06 /* ServiceError.swift in Sources */,
+				560387AA1BD6E81800ACBA06 /* LoginService.swift in Sources */,
 				56F585A91BCD34AD00C87158 /* LocalizedStrings.swift in Sources */,
 				56F585A01BCD261000C87158 /* AuthViewModelTests.swift in Sources */,
 				56F5859E1BCC5BC100C87158 /* AuthViewModel.swift in Sources */,
+				560387A91BD6E81500ACBA06 /* RegisterService.swift in Sources */,
+				560387AB1BD6E81C00ACBA06 /* ResetPasswordService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

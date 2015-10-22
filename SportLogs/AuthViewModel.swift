@@ -21,8 +21,17 @@ enum InputError: ErrorType {
   case InvalidUsernameOrPassword
 }
 
+protocol AuthViewModelDelegate
+{
+  func didRegisterSuccessfully()
+  func didLoginSuccessfully()
+  func didRecoverPasswordSuccessfully()
+  func presentErrorMessage(title:String, message:String)
+}
+
 class AuthViewModel {
   
+  var delegate:AuthViewModelDelegate?
   var viewMode:ViewMode = ViewMode.Login
   
   func usernamePlaceholder() -> NSAttributedString?
@@ -109,6 +118,16 @@ class AuthViewModel {
     return LocalizedStrings().stringForKey("invalidEmailErrorMessage", comment: "")
   }
   
+  func genericSuccessTitle() -> String?
+  {
+    return LocalizedStrings().stringForKey("genericSuccessTitle", comment: "")
+  }
+  
+  func recoverPasswordSuccessMessage() -> String?
+  {
+    return LocalizedStrings().stringForKey("recoverPasswordSuccessMessage", comment: "")
+  }
+  
   func switchToRecoverPasswordViewMode()
   {
     viewMode = ViewMode.ResetPassword
@@ -130,8 +149,34 @@ class AuthViewModel {
     {
       if let email = username where removeWhiteSpacesFromString(email).characters.count > 0
       {
-        let resetPasswordService = ResetPasswordService()
-        resetPasswordService.resetPasswordForEmail(email)
+        do
+        {
+          let resetPasswordService = ResetPasswordService()
+          try resetPasswordService.resetPasswordForEmail(email)
+          if let del = self.delegate
+          {
+            switchToLoginViewMode()
+            del.didRecoverPasswordSuccessfully()
+          }
+        }
+        catch let error as ServiceError
+        {
+          if error == ServiceError.NoInternet
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+          else if error == ServiceError.InvalidEmail
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+          else if error == ServiceError.ServerError
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+        }
+        catch
+        {
+        }
       }
       else
       {
@@ -140,10 +185,37 @@ class AuthViewModel {
     }
     else if viewMode == ViewMode.Login
     {
-      if let user = username, pass = password where removeWhiteSpacesFromString(user).characters.count > 0 && removeWhiteSpacesFromString(pass).characters.count > 0
+      if let user = username, pass = password where removeWhiteSpacesFromString(user).characters.count > 0 &&
+                                                    removeWhiteSpacesFromString(pass).characters.count > 0
       {
-        let loginService = LoginService()
-        loginService.loginUser(user,password: pass)
+        do
+        {
+          let loginService = LoginService()
+          try loginService.loginUser(user, password:pass)
+          if let del = self.delegate
+          {
+            del.didLoginSuccessfully()
+          }
+        }
+        
+        catch let error as ServiceError
+        {
+          if error == ServiceError.NoInternet
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+          else if error == ServiceError.InvalidUsernameOrPassword
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+          else if error == ServiceError.ServerError
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+        }
+        catch
+        {
+        }
       }
       else
       {
@@ -152,10 +224,41 @@ class AuthViewModel {
     }
     else
     {
-      if let user = username, pass = password where removeWhiteSpacesFromString(user).characters.count > 0 && removeWhiteSpacesFromString(pass).characters.count > 0
+      if let user = username, pass = password where removeWhiteSpacesFromString(user).characters.count > 0 &&
+                                                    removeWhiteSpacesFromString(pass).characters.count > 0
       {
-        let registerService = RegisterService()
-        registerService.registerUser(user,password:pass)
+        do
+        {
+          let registerService = RegisterService()
+          try registerService.registerUser(user, password:pass)
+          
+          if let del = self.delegate
+          {
+            del.didRegisterSuccessfully()
+          }
+        }
+        catch let error as ServiceError
+        {
+          if error == ServiceError.NoInternet
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+          else if error == ServiceError.UsernameTaken
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+          else if error == ServiceError.PasswordTooShort
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+          else if error == ServiceError.ServerError
+          {
+            delegate?.presentErrorMessage("", message: "")
+          }
+        }
+        catch
+        {
+        }
       }
       else
       {
