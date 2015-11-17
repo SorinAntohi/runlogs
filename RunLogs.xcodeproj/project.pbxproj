@@ -8,32 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		4F707B6A5A1C98D7B14BFF47 /* Pods_RunLogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC504DA696054721A7E251BD /* Pods_RunLogs.framework */; };
-		560387A81BD6E81100ACBA06 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9DB1BD6D3C000E436DF /* ServiceError.swift */; settings = {ASSET_TAGS = (); }; };
-		560387A91BD6E81500ACBA06 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA81BD131E8002258B0 /* RegisterService.swift */; settings = {ASSET_TAGS = (); }; };
-		560387AA1BD6E81800ACBA06 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA61BD1317D002258B0 /* LoginService.swift */; settings = {ASSET_TAGS = (); }; };
-		560387AB1BD6E81C00ACBA06 /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */; settings = {ASSET_TAGS = (); }; };
-		560387AD1BD7C88300ACBA06 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560387AC1BD7C88300ACBA06 /* UIImage+Extension.swift */; settings = {ASSET_TAGS = (); }; };
-		56067E0F1BD82BC400E862BA /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E0E1BD82BC400E862BA /* TermsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		56067E111BD98F3700E862BA /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E101BD98F3700E862BA /* TracksViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		56067E131BD9926E00E862BA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E121BD9926E00E862BA /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		56165DA71BD1317D002258B0 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA61BD1317D002258B0 /* LoginService.swift */; settings = {ASSET_TAGS = (); }; };
-		56165DA91BD131E8002258B0 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA81BD131E8002258B0 /* RegisterService.swift */; settings = {ASSET_TAGS = (); }; };
-		566AC9D81BD6327E00E436DF /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9D71BD6327E00E436DF /* DashboardViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		566AC9DA1BD6328900E436DF /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9D91BD6328900E436DF /* DashboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		566AC9E01BD6DF4F00E436DF /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9DB1BD6D3C000E436DF /* ServiceError.swift */; settings = {ASSET_TAGS = (); }; };
-		56DB86E31BD0DCC400A303BC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */; settings = {ASSET_TAGS = (); }; };
+		560387A81BD6E81100ACBA06 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9DB1BD6D3C000E436DF /* ServiceError.swift */; };
+		560387A91BD6E81500ACBA06 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA81BD131E8002258B0 /* RegisterService.swift */; };
+		560387AA1BD6E81800ACBA06 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA61BD1317D002258B0 /* LoginService.swift */; };
+		560387AB1BD6E81C00ACBA06 /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */; };
+		560387AD1BD7C88300ACBA06 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560387AC1BD7C88300ACBA06 /* UIImage+Extension.swift */; };
+		56067E0F1BD82BC400E862BA /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E0E1BD82BC400E862BA /* TermsViewController.swift */; };
+		56067E111BD98F3700E862BA /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E101BD98F3700E862BA /* TracksViewController.swift */; };
+		56067E131BD9926E00E862BA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E121BD9926E00E862BA /* ProfileViewController.swift */; };
+		56165DA71BD1317D002258B0 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA61BD1317D002258B0 /* LoginService.swift */; };
+		56165DA91BD131E8002258B0 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA81BD131E8002258B0 /* RegisterService.swift */; };
+		566AC9D81BD6327E00E436DF /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9D71BD6327E00E436DF /* DashboardViewModel.swift */; };
+		566AC9DA1BD6328900E436DF /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9D91BD6328900E436DF /* DashboardViewController.swift */; };
+		566AC9E01BD6DF4F00E436DF /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9DB1BD6D3C000E436DF /* ServiceError.swift */; };
+		56DB86E31BD0DCC400A303BC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */; };
 		56F5855F1BCBFB6B00C87158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */; };
 		56F585611BCBFB6B00C87158 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585601BCBFB6B00C87158 /* AuthViewController.swift */; };
 		56F585641BCBFB6B00C87158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56F585621BCBFB6B00C87158 /* Main.storyboard */; };
 		56F585671BCBFB6B00C87158 /* SportLogs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56F585651BCBFB6B00C87158 /* SportLogs.xcdatamodeld */; };
 		56F585691BCBFB6B00C87158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56F585681BCBFB6B00C87158 /* Assets.xcassets */; };
 		56F5856C1BCBFB6B00C87158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56F5856A1BCBFB6B00C87158 /* LaunchScreen.storyboard */; };
-		56F585921BCC36D000C87158 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56F585911BCC36D000C87158 /* intro.mp4 */; settings = {ASSET_TAGS = (); }; };
-		56F5859D1BCC5BC100C87158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		56F5859E1BCC5BC100C87158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		56F585A01BCD261000C87158 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859F1BCD261000C87158 /* AuthViewModelTests.swift */; settings = {ASSET_TAGS = (); }; };
-		56F585A81BCD34AD00C87158 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */; settings = {ASSET_TAGS = (); }; };
-		56F585A91BCD34AD00C87158 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */; settings = {ASSET_TAGS = (); }; };
+		56F585921BCC36D000C87158 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56F585911BCC36D000C87158 /* intro.mp4 */; };
+		56F5859D1BCC5BC100C87158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */; };
+		56F5859E1BCC5BC100C87158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859C1BCC5BC100C87158 /* AuthViewModel.swift */; };
+		56F585A01BCD261000C87158 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5859F1BCD261000C87158 /* AuthViewModelTests.swift */; };
+		56F585A81BCD34AD00C87158 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */; };
+		56F585A91BCD34AD00C87158 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F585A71BCD34AD00C87158 /* LocalizedStrings.swift */; };
 		56F585AD1BCD544A00C87158 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F585AC1BCD544A00C87158 /* AVFoundation.framework */; };
 		56F585AF1BCD545200C87158 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F585AE1BCD545200C87158 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -268,7 +268,7 @@
 				TargetAttributes = {
 					56F5855A1BCBFB6B00C87158 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = QA7C3BG73H;
+						DevelopmentTeam = ADJA9RHX24;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -532,7 +532,7 @@
 				INFOPLIST_FILE = SportLogs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.RunLogs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SorinAntohi.RunLogs;
 				PRODUCT_NAME = RunLogs;
 				SWIFT_OBJC_BRIDGING_HEADER = "SportLogs/RunLogs-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -553,7 +553,7 @@
 				INFOPLIST_FILE = SportLogs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iquestint.RunLogs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SorinAntohi.RunLogs;
 				PRODUCT_NAME = RunLogs;
 				SWIFT_OBJC_BRIDGING_HEADER = "SportLogs/RunLogs-Bridging-Header.h";
 			};

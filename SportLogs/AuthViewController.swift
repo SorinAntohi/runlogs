@@ -85,6 +85,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate, AuthViewModelDe
   
   @IBAction func onTerms(sender: AnyObject)
   {
+    self.formViewTapped(self)
     self.performSegueWithIdentifier("TermsSegue", sender: self)
   }
   
