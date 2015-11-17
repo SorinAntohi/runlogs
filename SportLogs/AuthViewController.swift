@@ -28,9 +28,13 @@ class AuthViewController: UIViewController, UITextFieldDelegate, AuthViewModelDe
   @IBOutlet weak var switchViewModeButton: UIButton!
   @IBOutlet weak var resetPasswordButton: UIButton!
   @IBOutlet weak var termsButton: UIButton!
+  @IBOutlet weak var currentStateLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    
+    self.navigationItem.hidesBackButton = true
     
     // Do any additional setup after loading the view, typically from a nib.
     viewModel = AuthViewModel()
@@ -44,6 +48,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate, AuthViewModelDe
     resetPasswordButton.setTitle(viewModel?.resetPasswordButtonTitle(), forState: UIControlState.Normal)
     termsButton.setTitle(viewModel?.termsButtonTitle(), forState: UIControlState.Normal)
     switchTermsButtonVisibility()
+    currentStateLabel.text = viewModel?.currentModeTitle()
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
   }
@@ -59,6 +64,11 @@ class AuthViewController: UIViewController, UITextFieldDelegate, AuthViewModelDe
   override func viewWillAppear(animated: Bool) {
     hideNavigationBar()
   }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        avPlayer?.play()
+    }
   
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return UIStatusBarStyle.LightContent
@@ -81,6 +91,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate, AuthViewModelDe
     switchRecoverPasswordButtonVisibility()
     switchPasswordVisibility()
     switchTermsButtonVisibility()
+    currentStateLabel.text = viewModel?.currentModeTitle()
   }
   
   @IBAction func onTerms(sender: AnyObject)
@@ -132,7 +143,6 @@ class AuthViewController: UIViewController, UITextFieldDelegate, AuthViewModelDe
     
     avPlayerLayer?.player = avPlayer
     self.view.layer.insertSublayer(avPlayerLayer!, below: layer!)
-    avPlayer?.play()
   }
   
   func moviePlayerReachedEndOfFile(notification: NSNotification)

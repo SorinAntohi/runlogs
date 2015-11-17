@@ -10,10 +10,18 @@ import Foundation
 
 class DashboardViewController : UIViewController
 {  
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     self.navigationItem.hidesBackButton = true
     self.title = "Dashboard"
-    self.tabBarController?.customizableViewControllers = nil;
   }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        showNavigationBar()
+    }
+    
+    func showNavigationBar() {
+        self.navigationController?.navigationBarHidden = false
+    }
 }

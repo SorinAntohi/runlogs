@@ -14,8 +14,6 @@
 		560387AB1BD6E81C00ACBA06 /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB86E21BD0DCC400A303BC /* ResetPasswordService.swift */; };
 		560387AD1BD7C88300ACBA06 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560387AC1BD7C88300ACBA06 /* UIImage+Extension.swift */; };
 		56067E0F1BD82BC400E862BA /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E0E1BD82BC400E862BA /* TermsViewController.swift */; };
-		56067E111BD98F3700E862BA /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E101BD98F3700E862BA /* TracksViewController.swift */; };
-		56067E131BD9926E00E862BA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56067E121BD9926E00E862BA /* ProfileViewController.swift */; };
 		56165DA71BD1317D002258B0 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA61BD1317D002258B0 /* LoginService.swift */; };
 		56165DA91BD131E8002258B0 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56165DA81BD131E8002258B0 /* RegisterService.swift */; };
 		566AC9D81BD6327E00E436DF /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AC9D71BD6327E00E436DF /* DashboardViewModel.swift */; };
@@ -51,8 +49,6 @@
 /* Begin PBXFileReference section */
 		560387AC1BD7C88300ACBA06 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		56067E0E1BD82BC400E862BA /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
-		56067E101BD98F3700E862BA /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
-		56067E121BD9926E00E862BA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		56165DA41BD12F81002258B0 /* RunLogs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunLogs-Bridging-Header.h"; sourceTree = "<group>"; };
 		56165DA61BD1317D002258B0 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		56165DA81BD131E8002258B0 /* RegisterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
@@ -145,8 +141,6 @@
 				56F5855E1BCBFB6B00C87158 /* AppDelegate.swift */,
 				56F585601BCBFB6B00C87158 /* AuthViewController.swift */,
 				566AC9D91BD6328900E436DF /* DashboardViewController.swift */,
-				56067E101BD98F3700E862BA /* TracksViewController.swift */,
-				56067E121BD9926E00E862BA /* ProfileViewController.swift */,
 				56067E0E1BD82BC400E862BA /* TermsViewController.swift */,
 				56F585621BCBFB6B00C87158 /* Main.storyboard */,
 				56F585681BCBFB6B00C87158 /* Assets.xcassets */,
@@ -377,7 +371,6 @@
 				56F585A81BCD34AD00C87158 /* LocalizedStrings.swift in Sources */,
 				56F5859D1BCC5BC100C87158 /* AuthViewModel.swift in Sources */,
 				56067E0F1BD82BC400E862BA /* TermsViewController.swift in Sources */,
-				56067E111BD98F3700E862BA /* TracksViewController.swift in Sources */,
 				560387AD1BD7C88300ACBA06 /* UIImage+Extension.swift in Sources */,
 				56F585611BCBFB6B00C87158 /* AuthViewController.swift in Sources */,
 				566AC9D81BD6327E00E436DF /* DashboardViewModel.swift in Sources */,
@@ -385,7 +378,6 @@
 				56DB86E31BD0DCC400A303BC /* ResetPasswordService.swift in Sources */,
 				56F5855F1BCBFB6B00C87158 /* AppDelegate.swift in Sources */,
 				566AC9DA1BD6328900E436DF /* DashboardViewController.swift in Sources */,
-				56067E131BD9926E00E862BA /* ProfileViewController.swift in Sources */,
 				56165DA91BD131E8002258B0 /* RegisterService.swift in Sources */,
 				56165DA71BD1317D002258B0 /* LoginService.swift in Sources */,
 			);

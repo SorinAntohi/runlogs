@@ -1,0 +1,22 @@
+PODS:
+  - HexColors (2.3.0)
+  - TSMessages (0.9.13):
+    - HexColors (~> 2.3.0)
+
+DEPENDENCIES:
+  - TSMessages (from `https://github.com/KrauseFx/TSMessages.git`)
+
+EXTERNAL SOURCES:
+  TSMessages:
+    :git: https://github.com/KrauseFx/TSMessages.git
+
+CHECKOUT OPTIONS:
+  TSMessages:
+    :commit: 3e5b2f6f9f9ac5a3ce7b2822cad606e56c223b5f
+    :git: https://github.com/KrauseFx/TSMessages.git
+
+SPEC CHECKSUMS:
+  HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
+  TSMessages: 6e403b790139636c15ab4f51946537095e03e79c
+
+COCOAPODS: 0.39.0

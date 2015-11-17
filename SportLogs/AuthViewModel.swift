@@ -74,6 +74,16 @@ class AuthViewModel {
       return LocalizedStrings().stringForKey("login", comment: "")
     }
   }
+    
+    func currentModeTitle() -> String? {
+        
+        if viewMode == ViewMode.Login {
+            return LocalizedStrings().stringForKey("login", comment: "")
+        }
+        else {
+            return LocalizedStrings().stringForKey("signup", comment: "")
+        }
+    }
   
   func resetPasswordButtonTitle() -> String?
   {
